@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMove : MonoBehaviour
 {
     bool running;
     float horizontal;
@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     float speed = 5f;
     [SerializeField]
     float smoothTurn = .5f;
-    Animator animator;
+   // Animator animator;
     // InputAction move;
 
     PlayerControls controls;
@@ -25,9 +25,10 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         controls.Movement.Walk.performed += ctx => move = ctx.ReadValue<Vector2>(); ;
         controls.Movement.Walk.canceled += ctx => move = Vector2.zero;
-        controls.Movement.Attack.performed += Attack;
+        //controls.Movement.Attack.performed += Attack;
     }
 
     // Update is called once per frame
@@ -35,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
     {
 
         controls = new PlayerControls();
-        animator = GetComponent<Animator>();
+      //  animator = GetComponent<Animator>();
         controls.Enable();
 
     }
@@ -47,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
         float runAnim = Mathf.Abs(move.x + move.y);
         if (move.magnitude != 0)
         {
-            animator.SetFloat("speed", runAnim);
+           // animator.SetFloat("speed", runAnim);
 
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, smoothTurn);
@@ -61,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
     void Attack(InputAction.CallbackContext context)
     {
         Debug.Log("I attacked");
-        animator.SetTrigger("attack");
+       // animator.SetTrigger("attack");
     }
 
 
