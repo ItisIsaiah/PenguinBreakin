@@ -24,7 +24,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     ""name"": ""PlayerControls"",
     ""maps"": [
         {
-            ""name"": ""Movement"",
+            ""name"": ""Controller"",
             ""id"": ""e7fe0fa2-a353-4fe6-bfb3-c0167250f2cd"",
             ""actions"": [
                 {
@@ -44,6 +44,24 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Swing"",
+                    ""type"": ""Button"",
+                    ""id"": ""b8f4b032-6240-4b15-ae21-98f8147285ca"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Jump"",
+                    ""type"": ""Button"",
+                    ""id"": ""b324850e-d353-45d1-8df5-4a7d412a100d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -134,16 +152,62 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""action"": ""Look"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""293bb1fc-1a9d-4dfd-9a4d-683abfbb4b1f"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Swing"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a51077ad-9064-47ad-aaf3-139636bc3d0c"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Swing"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""27295af2-5b13-48f1-8016-c0282a6c5623"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""787f7f5c-b2df-444b-83ba-8625169834f1"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
     ],
     ""controlSchemes"": []
 }");
-        // Movement
-        m_Movement = asset.FindActionMap("Movement", throwIfNotFound: true);
-        m_Movement_Walk = m_Movement.FindAction("Walk", throwIfNotFound: true);
-        m_Movement_Look = m_Movement.FindAction("Look", throwIfNotFound: true);
+        // Controller
+        m_Controller = asset.FindActionMap("Controller", throwIfNotFound: true);
+        m_Controller_Walk = m_Controller.FindAction("Walk", throwIfNotFound: true);
+        m_Controller_Look = m_Controller.FindAction("Look", throwIfNotFound: true);
+        m_Controller_Swing = m_Controller.FindAction("Swing", throwIfNotFound: true);
+        m_Controller_Jump = m_Controller.FindAction("Jump", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -200,34 +264,44 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         return asset.FindBinding(bindingMask, out action);
     }
 
-    // Movement
-    private readonly InputActionMap m_Movement;
-    private IMovementActions m_MovementActionsCallbackInterface;
-    private readonly InputAction m_Movement_Walk;
-    private readonly InputAction m_Movement_Look;
-    public struct MovementActions
+    // Controller
+    private readonly InputActionMap m_Controller;
+    private IControllerActions m_ControllerActionsCallbackInterface;
+    private readonly InputAction m_Controller_Walk;
+    private readonly InputAction m_Controller_Look;
+    private readonly InputAction m_Controller_Swing;
+    private readonly InputAction m_Controller_Jump;
+    public struct ControllerActions
     {
         private @PlayerControls m_Wrapper;
-        public MovementActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Walk => m_Wrapper.m_Movement_Walk;
-        public InputAction @Look => m_Wrapper.m_Movement_Look;
-        public InputActionMap Get() { return m_Wrapper.m_Movement; }
+        public ControllerActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Walk => m_Wrapper.m_Controller_Walk;
+        public InputAction @Look => m_Wrapper.m_Controller_Look;
+        public InputAction @Swing => m_Wrapper.m_Controller_Swing;
+        public InputAction @Jump => m_Wrapper.m_Controller_Jump;
+        public InputActionMap Get() { return m_Wrapper.m_Controller; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(MovementActions set) { return set.Get(); }
-        public void SetCallbacks(IMovementActions instance)
+        public static implicit operator InputActionMap(ControllerActions set) { return set.Get(); }
+        public void SetCallbacks(IControllerActions instance)
         {
-            if (m_Wrapper.m_MovementActionsCallbackInterface != null)
+            if (m_Wrapper.m_ControllerActionsCallbackInterface != null)
             {
-                @Walk.started -= m_Wrapper.m_MovementActionsCallbackInterface.OnWalk;
-                @Walk.performed -= m_Wrapper.m_MovementActionsCallbackInterface.OnWalk;
-                @Walk.canceled -= m_Wrapper.m_MovementActionsCallbackInterface.OnWalk;
-                @Look.started -= m_Wrapper.m_MovementActionsCallbackInterface.OnLook;
-                @Look.performed -= m_Wrapper.m_MovementActionsCallbackInterface.OnLook;
-                @Look.canceled -= m_Wrapper.m_MovementActionsCallbackInterface.OnLook;
+                @Walk.started -= m_Wrapper.m_ControllerActionsCallbackInterface.OnWalk;
+                @Walk.performed -= m_Wrapper.m_ControllerActionsCallbackInterface.OnWalk;
+                @Walk.canceled -= m_Wrapper.m_ControllerActionsCallbackInterface.OnWalk;
+                @Look.started -= m_Wrapper.m_ControllerActionsCallbackInterface.OnLook;
+                @Look.performed -= m_Wrapper.m_ControllerActionsCallbackInterface.OnLook;
+                @Look.canceled -= m_Wrapper.m_ControllerActionsCallbackInterface.OnLook;
+                @Swing.started -= m_Wrapper.m_ControllerActionsCallbackInterface.OnSwing;
+                @Swing.performed -= m_Wrapper.m_ControllerActionsCallbackInterface.OnSwing;
+                @Swing.canceled -= m_Wrapper.m_ControllerActionsCallbackInterface.OnSwing;
+                @Jump.started -= m_Wrapper.m_ControllerActionsCallbackInterface.OnJump;
+                @Jump.performed -= m_Wrapper.m_ControllerActionsCallbackInterface.OnJump;
+                @Jump.canceled -= m_Wrapper.m_ControllerActionsCallbackInterface.OnJump;
             }
-            m_Wrapper.m_MovementActionsCallbackInterface = instance;
+            m_Wrapper.m_ControllerActionsCallbackInterface = instance;
             if (instance != null)
             {
                 @Walk.started += instance.OnWalk;
@@ -236,13 +310,21 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Look.started += instance.OnLook;
                 @Look.performed += instance.OnLook;
                 @Look.canceled += instance.OnLook;
+                @Swing.started += instance.OnSwing;
+                @Swing.performed += instance.OnSwing;
+                @Swing.canceled += instance.OnSwing;
+                @Jump.started += instance.OnJump;
+                @Jump.performed += instance.OnJump;
+                @Jump.canceled += instance.OnJump;
             }
         }
     }
-    public MovementActions @Movement => new MovementActions(this);
-    public interface IMovementActions
+    public ControllerActions @Controller => new ControllerActions(this);
+    public interface IControllerActions
     {
         void OnWalk(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
+        void OnSwing(InputAction.CallbackContext context);
+        void OnJump(InputAction.CallbackContext context);
     }
 }

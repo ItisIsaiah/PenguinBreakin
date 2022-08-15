@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 2
-  lastUpdatedAtString: 2022-07-22T20:19:11.458-04:00
-  initializedAtString: 2022-07-22T20:19:11.428-04:00
+  lastUpdatedAtString: 2022-08-14T01:00:24.926-04:00
+  initializedAtString: 2022-08-13T23:43:21.955-04:00
   localBranches:
-  - name: who
-    tracking: 
+  - name: main
+    tracking: origin/main
   remoteBranches:
   - name: origin/main
     tracking: '[None]'
@@ -31,13 +31,13 @@ MonoBehaviour:
     token: 
   localConfigBranches:
     keys:
-    - who
+    - main
     values:
-    - name: who
+    - name: main
       remote:
-        name: 
-        url: 
-      trackingBranch: 
+        name: origin
+        url: https://github.com/ItisIsaiah/PenguinBreakin.git
+      trackingBranch: main
   remoteConfigBranches:
     keys:
     - origin

@@ -364,8 +364,6 @@
 -r:"Library/Bee/artifacts/500b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/500b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/500b0aE.dag/UnityEngine.UI.ref.dll"
-"Assets/FOV.cs"
-"Assets/FreeLookAddOn.cs"
 "Assets/Hovl Studio/Epic toon VFX 2/Demo scene/DemoToonVFX.cs"
 "Assets/Hovl Studio/Epic toon VFX 2/Prefabs/Front attack/FrontMover.cs"
 "Assets/Hovl Studio/Epic toon VFX 2/Scripts/EGA_EffectSound.cs"
@@ -374,14 +372,17 @@
 "Assets/NavMeshComponents/Scripts/NavMeshModifier.cs"
 "Assets/NavMeshComponents/Scripts/NavMeshModifierVolume.cs"
 "Assets/NavMeshComponents/Scripts/NavMeshSurface.cs"
-"Assets/PenguinBase.cs"
+"Assets/PenguinScriptableObject.cs"
 "Assets/PlayerControls.cs"
-"Assets/PlayerMove.cs"
 "Assets/RetroAesthetics/Scripts/CombineMeshes.cs"
 "Assets/RetroAesthetics/Scripts/InspectorButton.cs"
 "Assets/RetroAesthetics/Scripts/SceneField.cs"
 "Assets/RetroAesthetics/Scripts/UVScroller.cs"
 "Assets/RetroAesthetics/Shaders/Post-processing/RetroCameraEffect.cs"
+"Assets/scripts/FOV.cs"
+"Assets/scripts/FreeLookAddOn.cs"
+"Assets/scripts/PenguinBase.cs"
+"Assets/scripts/PlayerMove.cs"
 -langversion:9.0
 
 /deterministic
