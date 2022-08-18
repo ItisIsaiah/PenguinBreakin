@@ -38,12 +38,12 @@ public class PenguinBase : MonoBehaviour
         {
             if ( Vector3.Distance(transform.position, path[point].position) > distanceFromPoint)
             {
-                agent.SetDestination(path[point-1].position);
+                agent.SetDestination(path[point].position);
                
             }
             
             else if (Vector3.Distance(transform.position, path[point].position) < distanceFromPoint) {
-                if (path[point + 1])
+                if (!(point >= path.Length-1))
                 {
                     point++;
                 }
