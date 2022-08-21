@@ -24,9 +24,24 @@ public class PenguinBase : MonoBehaviour
     }
     private void Update()
     {
-        if (sight.canSee && Vector3.Distance(transform.position,playerRef.transform.position)>.5f) {
+        if (sight.canSee && Vector3.Distance(transform.position,playerRef.transform.position)>.5f&&!penType.scared) {
             agent.SetDestination(playerRef.transform.position);
-       }
+         }
+        else if (sight.canSee && Vector3.Distance(transform.position, playerRef.transform.position) > .5f && penType.scared)
+        {
+            agent.radius = 10f;
+        }
+        if (sight.canSee && Vector3.Distance(transform.position, playerRef.transform.position) > .5f && penType.aggressive)
+        {
+            //hit em baby!
+        }
+        else if (sight.canSee && Vector3.Distance(transform.position, playerRef.transform.position) > .5f && !penType.aggressive)
+        {
+            //run
+        }
+
+       
+
         if (health == 0)
         {
             Destroy(this.gameObject);

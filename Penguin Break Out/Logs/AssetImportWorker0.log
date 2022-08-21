@@ -15,7 +15,7 @@ C:/Users/zayfo/Documents/GitHub/PenguinBreakin/Penguin Break Out
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-65368
+60020
 Successfully changed project path to: C:/Users/zayfo/Documents/GitHub/PenguinBreakin/Penguin Break Out
 C:/Users/zayfo/Documents/GitHub/PenguinBreakin/Penguin Break Out
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ C:/Users/zayfo/Documents/GitHub/PenguinBreakin/Penguin Break Out
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 90.87 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 100.99 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.1.10f1 (9aa0f82c4f96)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.1.10f1/Editor/Data/Resources/UnitySubsystems
@@ -63,40 +63,40 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.1.10f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.1.10f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.1.10f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56260
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56440
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.1.10f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.005468 seconds.
+Registered in 0.005031 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 94.13 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 93.47 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.593 seconds
+- Completed reload, in  0.614 seconds
 Domain Reload Profiling:
-	ReloadAssembly (593ms)
-		BeginReloadAssembly (64ms)
+	ReloadAssembly (615ms)
+		BeginReloadAssembly (67ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (430ms)
-			LoadAssemblies (61ms)
+		EndReloadAssembly (441ms)
+			LoadAssemblies (65ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (98ms)
-				TypeCache.Initialize (98ms)
-					TypeCache.ScanAssembly (97ms)
+			SetupTypeCache (101ms)
+				TypeCache.Initialize (101ms)
+					TypeCache.ScanAssembly (99ms)
 				ResolveRequiredComponents (0ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (23ms)
-			SetupLoadedEditorAssemblies (262ms)
+			RebuildScriptCaches (24ms)
+			SetupLoadedEditorAssemblies (267ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (6ms)
 				SetLoadedEditorAssemblies (6ms)
 				RefreshPlugins (94ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (115ms)
+				ProcessInitializeOnLoadAttributes (120ms)
 				ProcessInitializeOnLoadMethodAttributes (40ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
@@ -104,52 +104,52 @@ Domain Reload Profiling:
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.009413 seconds.
+Registered in 0.009548 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 88.69 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 100.03 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.252 seconds
+- Completed reload, in  1.322 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1252ms)
-		BeginReloadAssembly (104ms)
+	ReloadAssembly (1323ms)
+		BeginReloadAssembly (99ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (19ms)
-		EndReloadAssembly (1033ms)
-			LoadAssemblies (71ms)
+		EndReloadAssembly (1116ms)
+			LoadAssemblies (76ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (252ms)
-				TypeCache.Initialize (242ms)
-					TypeCache.ScanAssembly (238ms)
-				ResolveRequiredComponents (10ms)
+			SetupTypeCache (288ms)
+				TypeCache.Initialize (275ms)
+					TypeCache.ScanAssembly (271ms)
+				ResolveRequiredComponents (12ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (76ms)
-			SetupLoadedEditorAssemblies (585ms)
+			RebuildScriptCaches (90ms)
+			SetupLoadedEditorAssemblies (612ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
+				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (5ms)
-				RefreshPlugins (89ms)
-				BeforeProcessingInitializeOnLoad (96ms)
-				ProcessInitializeOnLoadAttributes (343ms)
-				ProcessInitializeOnLoadMethodAttributes (43ms)
+				RefreshPlugins (100ms)
+				BeforeProcessingInitializeOnLoad (91ms)
+				ProcessInitializeOnLoadAttributes (365ms)
+				ProcessInitializeOnLoadMethodAttributes (40ms)
 				AfterProcessingInitializeOnLoad (6ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (7ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 1.74 ms, found 4 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 1.17 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5159 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 78 unused Assets / (3.5 MB). Loaded Objects now: 5659.
-Memory consumption went from 0.87 GB to 0.87 GB.
-Total: 4.350300 ms (FindLiveObjects: 0.438100 ms CreateObjectMapping: 0.142100 ms MarkObjects: 3.145100 ms  DeleteObjects: 0.623800 ms)
+Unloading 5344 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 78 unused Assets / (3.5 MB). Loaded Objects now: 5845.
+Memory consumption went from 0.90 GB to 0.90 GB.
+Total: 4.527000 ms (FindLiveObjects: 0.464400 ms CreateObjectMapping: 0.148100 ms MarkObjects: 3.244300 ms  DeleteObjects: 0.669100 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -163,56 +163,80 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 128589.816757 seconds.
-  path: Packages/com.unity.render-pipelines.high-definition/package.json
-  artifactKey: Guid(6f54db4299717fc4ca37866c6afa0905) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.render-pipelines.high-definition/package.json using Guid(6f54db4299717fc4ca37866c6afa0905) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1540d0244e20d77e431328fca08c34d7') in 0.030716 seconds 
+  Time since last request: 120517.954647 seconds.
+  path: Assets/Animation/MainCharacter.fbx
+  artifactKey: Guid(9a7e9dddd63581e4a88373ee14ab060e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation/MainCharacter.fbx using Guid(9a7e9dddd63581e4a88373ee14ab060e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a61e41e101545a597907fe51ce722a8') in 0.796296 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.443672 seconds.
+  path: Assets/Hovl Studio/Epic toon VFX 2/Models/EGACrystalPiese.fbx
+  artifactKey: Guid(3e7e92633d750d440b9551f9f4bf95aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hovl Studio/Epic toon VFX 2/Models/EGACrystalPiese.fbx using Guid(3e7e92633d750d440b9551f9f4bf95aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c9ae6960d594131a555e27dd3f86667') in 0.024866 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Hovl Studio/Epic toon VFX 2/Models/HalfSphere4.fbx
+  artifactKey: Guid(11c5056a85d608341b03a48d6ce12cf2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hovl Studio/Epic toon VFX 2/Models/HalfSphere4.fbx using Guid(11c5056a85d608341b03a48d6ce12cf2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1df128c6d7b1764969fe78dd8f11c7e0') in 0.024062 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.071593 seconds.
+  path: Assets/Hovl Studio/Epic toon VFX 2/Models/BeamMesh.fbx
+  artifactKey: Guid(be6a3d2471646a348914698de60b3306) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hovl Studio/Epic toon VFX 2/Models/BeamMesh.fbx using Guid(be6a3d2471646a348914698de60b3306) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6744e7263a82ffa4e55ed7d06bcce05') in 0.023156 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.348794 seconds.
+  path: Assets/Hovl Studio/Epic toon VFX 2/Demo scene/Demo scene hero/Character.fbx
+  artifactKey: Guid(ba7f513a199d49745b8a2d939a3c399e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hovl Studio/Epic toon VFX 2/Demo scene/Demo scene hero/Character.fbx using Guid(ba7f513a199d49745b8a2d939a3c399e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '512a2c3d7fefee8bfa0c97da93db41e1') in 0.063285 seconds 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.012223 seconds.
+Registered in 0.009089 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.38 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 1.16 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.361 seconds
+- Completed reload, in  1.221 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1362ms)
-		BeginReloadAssembly (137ms)
+	ReloadAssembly (1221ms)
+		BeginReloadAssembly (161ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
+			DisableScriptedObjects (26ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (41ms)
-		EndReloadAssembly (1117ms)
-			LoadAssemblies (79ms)
+			CreateAndSetChildDomain (50ms)
+		EndReloadAssembly (953ms)
+			LoadAssemblies (68ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (273ms)
-				TypeCache.Initialize (262ms)
-					TypeCache.ScanAssembly (256ms)
-				ResolveRequiredComponents (12ms)
+			SetupTypeCache (241ms)
+				TypeCache.Initialize (230ms)
+					TypeCache.ScanAssembly (224ms)
+				ResolveRequiredComponents (11ms)
 			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (64ms)
-			SetupLoadedEditorAssemblies (602ms)
+			RebuildScriptCaches (59ms)
+			SetupLoadedEditorAssemblies (460ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (12ms)
+				InitializePlatformSupportModulesInManaged (10ms)
 				SetLoadedEditorAssemblies (5ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (195ms)
-				ProcessInitializeOnLoadAttributes (353ms)
-				ProcessInitializeOnLoadMethodAttributes (30ms)
-				AfterProcessingInitializeOnLoad (7ms)
+				BeforeProcessingInitializeOnLoad (67ms)
+				ProcessInitializeOnLoadAttributes (342ms)
+				ProcessInitializeOnLoadMethodAttributes (28ms)
+				AfterProcessingInitializeOnLoad (6ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (11ms)
+			AwakeInstancesAfterBackupRestoration (16ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 3.04 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 3.06 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4996 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 61 unused Assets / (3.7 MB). Loaded Objects now: 5844.
-Memory consumption went from 0.85 GB to 0.85 GB.
-Total: 4.530700 ms (FindLiveObjects: 0.437800 ms CreateObjectMapping: 0.127300 ms MarkObjects: 2.939300 ms  DeleteObjects: 1.025500 ms)
+Unloading 4993 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 58 unused Assets / (3.5 MB). Loaded Objects now: 6012.
+Memory consumption went from 0.86 GB to 0.86 GB.
+Total: 5.257700 ms (FindLiveObjects: 0.535900 ms CreateObjectMapping: 0.169700 ms MarkObjects: 3.576000 ms  DeleteObjects: 0.974800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -224,371 +248,3 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 697.551791 seconds.
-  path: Assets/DreamOS - Complete OS UI/Textures
-  artifactKey: Guid(d224d7b007cf37c47a9f42f8771df1e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Textures using Guid(d224d7b007cf37c47a9f42f8771df1e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e550aeb06ef4b6741ae4122463bb55c') in 0.017187 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.490518 seconds.
-  path: Assets/DreamOS - Complete OS UI/Animations
-  artifactKey: Guid(b7490a5c96704ce4684fb7458e15ee22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Animations using Guid(b7490a5c96704ce4684fb7458e15ee22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fa17fcf044bca383b635cb5aad3e950') in 0.008817 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 7.399605 seconds.
-  path: Assets/DreamOS - Complete OS UI/Audio
-  artifactKey: Guid(7a3a9a1ab00500344afb6742163ee96e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Audio using Guid(7a3a9a1ab00500344afb6742163ee96e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98938a9fd2808b3dc0046fdd41fd4c03') in 0.006008 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.079783 seconds.
-  path: Assets/DreamOS - Complete OS UI/Audio/_Mixer.mixer
-  artifactKey: Guid(1c3ced746d679d74395fb9d4a9e50c47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Audio/_Mixer.mixer using Guid(1c3ced746d679d74395fb9d4a9e50c47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63230e268febdefbc1dd48ffe8617031') in 0.023532 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.665920 seconds.
-  path: Assets/DreamOS - Complete OS UI/Audio/Music
-  artifactKey: Guid(76394ca9f3ecc1841a30c19a721206d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Audio/Music using Guid(76394ca9f3ecc1841a30c19a721206d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '676f388c7a9767e909274ccf68d1b3c1') in 0.005962 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.056994 seconds.
-  path: Assets/DreamOS - Complete OS UI/Audio/Music/Anemo.wav
-  artifactKey: Guid(c7eab1eeb7e0527408ad9880ad60ed66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Audio/Music/Anemo.wav using Guid(c7eab1eeb7e0527408ad9880ad60ed66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca7a35d20480d6e2c62f44a290930931') in 0.182104 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/DreamOS - Complete OS UI/Audio/Music/Jack the Lumberer.wav
-  artifactKey: Guid(13c5362a767e48e448f5a7cb925809a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Audio/Music/Jack the Lumberer.wav using Guid(13c5362a767e48e448f5a7cb925809a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3f4e94e28989e311e9b05c19deb32c7') in 0.033294 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/DreamOS - Complete OS UI/Audio/Music/Silent Night.wav
-  artifactKey: Guid(c95c78ef30d4a20419b21affb74adb80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Audio/Music/Silent Night.wav using Guid(c95c78ef30d4a20419b21affb74adb80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ea7ecb1cdac9d9670b7feec4a96268f') in 0.024683 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 489.490392 seconds.
-  path: Assets/DreamOS - Complete OS UI/Textures/Icons/256x/Add.png
-  artifactKey: Guid(47c23c7d959b56545b70c054f349f20d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Textures/Icons/256x/Add.png using Guid(47c23c7d959b56545b70c054f349f20d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f83515668003e84f28ba24f6e16c4b43') in 0.119245 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/DreamOS - Complete OS UI/Textures/Icons/128x/Apps.png
-  artifactKey: Guid(6026f398064076a43af4b394a1ce71f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Textures/Icons/128x/Apps.png using Guid(6026f398064076a43af4b394a1ce71f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5ea00bdd75eaeec24aff54ff2bf76ec') in 0.022741 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000040 seconds.
-  path: Assets/DreamOS - Complete OS UI/Textures/Icons/256x/Apps.png
-  artifactKey: Guid(c61e0efcddf3d2e45b2c58faae5d514d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Textures/Icons/256x/Apps.png using Guid(c61e0efcddf3d2e45b2c58faae5d514d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7f23784d7a08e4cc452f915138bd18f') in 0.020202 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/DreamOS - Complete OS UI/Textures/Icons/64x/Apps.png
-  artifactKey: Guid(49b10e50f0ff4ea40b61717e01f74de4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Textures/Icons/64x/Apps.png using Guid(49b10e50f0ff4ea40b61717e01f74de4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '293b9b27f6c78a0454c918abdb4e1d5e') in 0.023802 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 3.115598 seconds.
-  path: Assets/DreamOS - Complete OS UI/Audio/Placeholder/Audio Message 2.wav
-  artifactKey: Guid(95a8745fedc40f74db07527ad81afedc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Audio/Placeholder/Audio Message 2.wav using Guid(95a8745fedc40f74db07527ad81afedc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bec813794d93b5e6ad2c8e75b10cfa5') in 0.012655 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/DreamOS - Complete OS UI/Audio/Placeholder/Keystroke 1.wav
-  artifactKey: Guid(bf68f22d1837c7b4e873c10dbcf48913) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Audio/Placeholder/Keystroke 1.wav using Guid(bf68f22d1837c7b4e873c10dbcf48913) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a93bf17caf309aa38bff8b5973e8c63') in 0.017878 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/DreamOS - Complete OS UI/Audio/Placeholder/Mouse 1.wav
-  artifactKey: Guid(5df41e9c90ab71046b3c011329051759) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Audio/Placeholder/Mouse 1.wav using Guid(5df41e9c90ab71046b3c011329051759) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4716e316dfa907268b6e44c8e6dcea95') in 0.024223 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/DreamOS - Complete OS UI/Audio/Placeholder/Keystroke 2.wav
-  artifactKey: Guid(bcf365ffd5487f740ab9460c1c6e81ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Audio/Placeholder/Keystroke 2.wav using Guid(bcf365ffd5487f740ab9460c1c6e81ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '366f1b2cbfc1fdb5a27b69661e0af43d') in 0.016858 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/DreamOS - Complete OS UI/Audio/Placeholder/Keystroke 5.wav
-  artifactKey: Guid(b9d258afc67c3954f8e3416d78bf596b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Audio/Placeholder/Keystroke 5.wav using Guid(b9d258afc67c3954f8e3416d78bf596b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '986d31e921ec0d66361a2fc049beb8ed') in 0.014122 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/DreamOS - Complete OS UI/Audio/Placeholder/Keystroke 3.wav
-  artifactKey: Guid(0d941b0bc164aa14594836b672428d20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Audio/Placeholder/Keystroke 3.wav using Guid(0d941b0bc164aa14594836b672428d20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e051f280317b08bf6e813deb42c4f70') in 0.015838 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 6.742105 seconds.
-  path: Assets/DreamOS - Complete OS UI/Fonts/LCR SDF.asset
-  artifactKey: Guid(aa6077fdbae1a0849858aadd1fce2ed0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Fonts/LCR SDF.asset using Guid(aa6077fdbae1a0849858aadd1fce2ed0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Shader 'TextMeshPro/Distance Field': fallback shader 'TextMeshPro/Mobile/Distance Field' not found
- -> (artifact id: '3c7d249548e68ae88decdcb9e84df3c2') in 4.018276 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000044 seconds.
-  path: Assets/DreamOS - Complete OS UI/Fonts/OpenSans-ExtraBoldItalic SDF.asset
-  artifactKey: Guid(e4041c94a2181b243bd1912946bfbe63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Fonts/OpenSans-ExtraBoldItalic SDF.asset using Guid(e4041c94a2181b243bd1912946bfbe63) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Shader 'TextMeshPro/Distance Field': fallback shader 'TextMeshPro/Mobile/Distance Field' not found
- -> (artifact id: 'c515c6009ff574680594517310260ca4') in 0.036359 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000055 seconds.
-  path: Assets/DreamOS - Complete OS UI/Fonts/OpenSans-Italic SDF.asset
-  artifactKey: Guid(ff92caddbdea54743a04dda78cc41035) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Fonts/OpenSans-Italic SDF.asset using Guid(ff92caddbdea54743a04dda78cc41035) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Shader 'TextMeshPro/Distance Field': fallback shader 'TextMeshPro/Mobile/Distance Field' not found
- -> (artifact id: 'a8675c475db3c01bf1bdf5e1a52407b1') in 0.032205 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/DreamOS - Complete OS UI/Fonts/OpenSans-Regular SDF.asset
-  artifactKey: Guid(4bd810f1cbcb0f446a8f5a31453e243f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Fonts/OpenSans-Regular SDF.asset using Guid(4bd810f1cbcb0f446a8f5a31453e243f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Shader 'TextMeshPro/Distance Field': fallback shader 'TextMeshPro/Mobile/Distance Field' not found
- -> (artifact id: '6b37cf6bdc5b6123337f722197616573') in 0.037976 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/DreamOS - Complete OS UI/Fonts/OpenSans-Light.ttf
-  artifactKey: Guid(9c8fd042b7bad3647aacece9e796fdf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Fonts/OpenSans-Light.ttf using Guid(9c8fd042b7bad3647aacece9e796fdf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9eec519304bc50f54b30c537878fdb7') in 0.027045 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/DreamOS - Complete OS UI/Fonts/OpenSans-SemiboldItalic SDF.asset
-  artifactKey: Guid(e5fa6cba27f1b7a47838db200baa1556) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Fonts/OpenSans-SemiboldItalic SDF.asset using Guid(e5fa6cba27f1b7a47838db200baa1556) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Shader 'TextMeshPro/Distance Field': fallback shader 'TextMeshPro/Mobile/Distance Field' not found
- -> (artifact id: '1337575ee013d7451de40eb1b87fe72e') in 0.034115 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/DreamOS - Complete OS UI/Fonts/OpenSans-BoldItalic.ttf
-  artifactKey: Guid(bede1f0d27b7fe64f97b0e40e3ab76d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Fonts/OpenSans-BoldItalic.ttf using Guid(bede1f0d27b7fe64f97b0e40e3ab76d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43ee49dabfafd5feb84617f838c6ac75') in 0.027476 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/DreamOS - Complete OS UI/Fonts/OpenSans-LightItalic SDF.asset
-  artifactKey: Guid(d10d3fbe67cb68d41930a013bc4e2e43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Fonts/OpenSans-LightItalic SDF.asset using Guid(d10d3fbe67cb68d41930a013bc4e2e43) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Shader 'TextMeshPro/Distance Field': fallback shader 'TextMeshPro/Mobile/Distance Field' not found
- -> (artifact id: 'd22857c1f86ca92af3768a51b9c49422') in 0.037384 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000048 seconds.
-  path: Assets/DreamOS - Complete OS UI/Fonts/OpenSans-Semibold SDF.asset
-  artifactKey: Guid(84dd14695854bbc43a5faa24fcf93d0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Fonts/OpenSans-Semibold SDF.asset using Guid(84dd14695854bbc43a5faa24fcf93d0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Shader 'TextMeshPro/Distance Field': fallback shader 'TextMeshPro/Mobile/Distance Field' not found
- -> (artifact id: '65e4173bc1a1c9b18dfcc7e8e6cf8a7e') in 0.037642 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/DreamOS - Complete OS UI/Fonts/OpenSans-ExtraBold.ttf
-  artifactKey: Guid(122834da39c9ff3428f57bd1a15782c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Fonts/OpenSans-ExtraBold.ttf using Guid(122834da39c9ff3428f57bd1a15782c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe0bcacb42c89d806059cf405bbb4d5c') in 0.027870 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000039 seconds.
-  path: Assets/DreamOS - Complete OS UI/Fonts/OpenSans-Regular.ttf
-  artifactKey: Guid(5997fe0be3eb5fd40810e50d6cabb652) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Fonts/OpenSans-Regular.ttf using Guid(5997fe0be3eb5fd40810e50d6cabb652) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b4c0d9f67713de55ed4a86f2047d4ad') in 0.024235 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000044 seconds.
-  path: Assets/DreamOS - Complete OS UI/Fonts/OpenSans-Semibold.ttf
-  artifactKey: Guid(29d1861da7232b847ad1337bd27c3113) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Fonts/OpenSans-Semibold.ttf using Guid(29d1861da7232b847ad1337bd27c3113) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c590a0d3867624945eaf51c252c85a6') in 0.026396 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 19.837040 seconds.
-  path: Assets/DreamOS - Complete OS UI/Prefabs/Settings/Wallpaper Selection Button.prefab
-  artifactKey: Guid(e85cfc5a36a31c54ab32f17c966f9f4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Prefabs/Settings/Wallpaper Selection Button.prefab using Guid(e85cfc5a36a31c54ab32f17c966f9f4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7bce6818d9eb8040e38f461f84d52c37') in 0.020184 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 34.844339 seconds.
-  path: Assets/DreamOS - Complete OS UI/Prefabs/Game Hub/Library Item.prefab
-  artifactKey: Guid(2fb5086ba2125c84189f81023975cd53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Prefabs/Game Hub/Library Item.prefab using Guid(2fb5086ba2125c84189f81023975cd53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13094d110f9bf59901da62718e275c2b') in 0.038301 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000074 seconds.
-  path: Assets/DreamOS - Complete OS UI/Prefabs/Game Hub/Store Item.prefab
-  artifactKey: Guid(814607a2c0a4c044e81346d964ba21d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Prefabs/Game Hub/Store Item.prefab using Guid(814607a2c0a4c044e81346d964ba21d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Shader 'TextMeshPro/Distance Field': fallback shader 'TextMeshPro/Mobile/Distance Field' not found
- -> (artifact id: '22f1fbf362ceb6a5feee1a50f1207f8a') in 0.033612 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 24.181215 seconds.
-  path: Assets/DreamOS - Complete OS UI/Textures/Icons/128x/Arrow Up.png
-  artifactKey: Guid(6afbcc6b5fae9b141a0f570d333df327) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Textures/Icons/128x/Arrow Up.png using Guid(6afbcc6b5fae9b141a0f570d333df327) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20815676c44be9bafc40b3c98afdc7f2') in 0.019063 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/DreamOS - Complete OS UI/Textures/Icons/128x/Commander.png
-  artifactKey: Guid(3ec63597f9e5c314c81ac95c0d5e8544) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Textures/Icons/128x/Commander.png using Guid(3ec63597f9e5c314c81ac95c0d5e8544) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a8ee590ee7907a5b275130e3bf4ebd5') in 0.017869 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/DreamOS - Complete OS UI/Textures/Icons/128x/Next Music.png
-  artifactKey: Guid(6e98c55b971a65144b7b1dc4fed69f3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Textures/Icons/128x/Next Music.png using Guid(6e98c55b971a65144b7b1dc4fed69f3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1d65619b6a37fc4e2aeb75de30ccc92') in 0.020239 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/DreamOS - Complete OS UI/Textures/Icons/128x/DreamOS Arrow.png
-  artifactKey: Guid(7787414555bd8d241804dc07da347f09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Textures/Icons/128x/DreamOS Arrow.png using Guid(7787414555bd8d241804dc07da347f09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '644ea26aa10bb728734caa1fe39f08f1') in 0.019233 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Assets/DreamOS - Complete OS UI/Textures/Icons/128x/Signal Best.png
-  artifactKey: Guid(842b1bce016667446807008797be547b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Textures/Icons/128x/Signal Best.png using Guid(842b1bce016667446807008797be547b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32658164265a3b834df4be3b53875001') in 0.020279 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Assets/DreamOS - Complete OS UI/Textures/Icons/128x/Home.png
-  artifactKey: Guid(79d58ac14ccb56244b604e18d2b01546) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Textures/Icons/128x/Home.png using Guid(79d58ac14ccb56244b604e18d2b01546) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbfb350dfad2cd11da2f3d19c8063376') in 0.020579 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000048 seconds.
-  path: Assets/DreamOS - Complete OS UI/Textures/Icons/128x/DreamOS.png
-  artifactKey: Guid(590a34195d0e5c745834559d224676ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Textures/Icons/128x/DreamOS.png using Guid(590a34195d0e5c745834559d224676ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '390378ae3a2bceed37549db36a0d54af') in 0.019449 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/DreamOS - Complete OS UI/Textures/Icons/128x/Delete.png
-  artifactKey: Guid(6c0a8267acde2f94e986c204c25ad848) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Textures/Icons/128x/Delete.png using Guid(6c0a8267acde2f94e986c204c25ad848) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '891359a6b5318a719befed67735cdcd7') in 0.019581 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000040 seconds.
-  path: Assets/DreamOS - Complete OS UI/Textures/Icons/128x/Welcome.png
-  artifactKey: Guid(51a02d4851c84024e9008c566f6c2476) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Textures/Icons/128x/Welcome.png using Guid(51a02d4851c84024e9008c566f6c2476) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10355f2a40977d3c53b0f79a20619ea8') in 0.020538 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/DreamOS - Complete OS UI/Textures/Icons/128x/Seek.png
-  artifactKey: Guid(49a4d0604de53e04e998a6b07927c329) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Textures/Icons/128x/Seek.png using Guid(49a4d0604de53e04e998a6b07927c329) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45848c443b12d9558f29bcf793307a89') in 0.018836 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/DreamOS - Complete OS UI/Textures/Icons/128x/Hamburger Menu.png
-  artifactKey: Guid(a360168a0dca0d348be17b168214ffcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Textures/Icons/128x/Hamburger Menu.png using Guid(a360168a0dca0d348be17b168214ffcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc27ec1907e2a463d408854b6396379d') in 0.020231 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000051 seconds.
-  path: Assets/DreamOS - Complete OS UI/Textures/Icons/128x/Video Library.png
-  artifactKey: Guid(c40f11fb6b100814bb6c761172b5bc29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Textures/Icons/128x/Video Library.png using Guid(c40f11fb6b100814bb6c761172b5bc29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a16e1639884f94afe0397ebe1dcfc406') in 0.020340 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000052 seconds.
-  path: Assets/DreamOS - Complete OS UI/Textures/Icons/128x/Settings.png
-  artifactKey: Guid(cac5d1bae77a81144b2b2b641b79dd0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Textures/Icons/128x/Settings.png using Guid(cac5d1bae77a81144b2b2b641b79dd0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6232c23ffbe4d7c6da5f9f210c674f8') in 0.018066 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/DreamOS - Complete OS UI/Textures/Icons/128x/Error.png
-  artifactKey: Guid(76ec490725116474d8f22eb6b49669d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Textures/Icons/128x/Error.png using Guid(76ec490725116474d8f22eb6b49669d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '728af441167b6ccbbbd16c62305b1f7e') in 0.018007 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000055 seconds.
-  path: Assets/DreamOS - Complete OS UI/Textures/Icons/128x/Lock.png
-  artifactKey: Guid(e43e493993dd7164e9880216a2967af9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Textures/Icons/128x/Lock.png using Guid(e43e493993dd7164e9880216a2967af9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d54df05c64a0d1e60e6ecd273e0dd07') in 0.019044 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000039 seconds.
-  path: Assets/DreamOS - Complete OS UI/Textures/Icons/128x/Pin.png
-  artifactKey: Guid(e6b2dbffd09e56f4298a4fb98b1055f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Textures/Icons/128x/Pin.png using Guid(e6b2dbffd09e56f4298a4fb98b1055f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4974056d4d61e57cd21260a1b3174ce9') in 0.017501 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/DreamOS - Complete OS UI/Textures/Icons/128x/Picture.png
-  artifactKey: Guid(de3018f1c9a832445b0a2e4afd405e06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Textures/Icons/128x/Picture.png using Guid(de3018f1c9a832445b0a2e4afd405e06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '595e5137fe64199d10a008d6b05d1aad') in 0.019579 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000047 seconds.
-  path: Assets/DreamOS - Complete OS UI/Textures/Icons/128x/Fullscreen.png
-  artifactKey: Guid(640bef43ddb6aa244a2312d0b5ae6a8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Textures/Icons/128x/Fullscreen.png using Guid(640bef43ddb6aa244a2312d0b5ae6a8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4fde33272da8aeba4cfdff94fee4da9') in 0.019521 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000039 seconds.
-  path: Assets/DreamOS - Complete OS UI/Textures/Icons/128x/Signal Strong.png
-  artifactKey: Guid(be852456bbc27304881baf4a82c95a1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Textures/Icons/128x/Signal Strong.png using Guid(be852456bbc27304881baf4a82c95a1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc42bee3c980a045d77c61a85598cebf') in 0.019614 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/DreamOS - Complete OS UI/Textures/Icons/128x/Shut Down.png
-  artifactKey: Guid(dcdc613a8e64ac34abd8c2e19abd6d73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Textures/Icons/128x/Shut Down.png using Guid(dcdc613a8e64ac34abd8c2e19abd6d73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '856d251e7151d1731699bcd5f02843db') in 0.019618 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000046 seconds.
-  path: Assets/DreamOS - Complete OS UI/Textures/Icons/128x/Refresh.png
-  artifactKey: Guid(ae22dde3f573bc24a92b884561c3c253) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Textures/Icons/128x/Refresh.png using Guid(ae22dde3f573bc24a92b884561c3c253) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c637eea575106c577c295829208a8b6c') in 0.020910 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000047 seconds.
-  path: Assets/DreamOS - Complete OS UI/Textures/Icons/128x/Lock Open.png
-  artifactKey: Guid(654335c08a6f73a4ebf2e70d83cf6bbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Textures/Icons/128x/Lock Open.png using Guid(654335c08a6f73a4ebf2e70d83cf6bbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3c8d1c3cde378d2460f62bed3c1bfd8') in 0.018559 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000039 seconds.
-  path: Assets/DreamOS - Complete OS UI/Textures/Icons/128x/Signal Weak.png
-  artifactKey: Guid(2dae41e627990cd4290c6d92d30d54e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Textures/Icons/128x/Signal Weak.png using Guid(2dae41e627990cd4290c6d92d30d54e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3cb71c1c618a05ad11f98b65489bc5d7') in 0.018072 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000036 seconds.
-  path: Assets/DreamOS - Complete OS UI/Textures/Icons/128x/Note Library.png
-  artifactKey: Guid(6f722a8a254a39f43b3fbcf133b85e28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Textures/Icons/128x/Note Library.png using Guid(6f722a8a254a39f43b3fbcf133b85e28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c259b5911c41b6bd252b1a247594ff82') in 0.017181 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/DreamOS - Complete OS UI/Textures/Icons/128x/Star Outline.png
-  artifactKey: Guid(267913608170e034484b2f80209f404f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Textures/Icons/128x/Star Outline.png using Guid(267913608170e034484b2f80209f404f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fbb9d670f1737ddd4e4ef7f2fa8457b') in 0.021794 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000036 seconds.
-  path: Assets/DreamOS - Complete OS UI/Textures/Icons/128x/Timer.png
-  artifactKey: Guid(8f72dca1640a13b4c959b5274c408858) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Textures/Icons/128x/Timer.png using Guid(8f72dca1640a13b4c959b5274c408858) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29c6f0e68a3f76e3261682da413d14e4') in 0.023160 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000039 seconds.
-  path: Assets/DreamOS - Complete OS UI/Textures/Icons/128x/Photo Library.png
-  artifactKey: Guid(db6d85b78362b0949812d0abdd44dcb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DreamOS - Complete OS UI/Textures/Icons/128x/Photo Library.png using Guid(db6d85b78362b0949812d0abdd44dcb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb42b8e803b4e945853da21938812cfd') in 0.019448 seconds 
