@@ -59,6 +59,7 @@ public class PlayerMove : MonoBehaviour
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             transform.position += moveDir.normalized * speed * Time.deltaTime;
+            Debug.Log("moving");
         }
 
 
@@ -90,7 +91,7 @@ public class PlayerMove : MonoBehaviour
    
 
 
-    void Sprint(InputAction.CallbackContext context)
+   /* void Sprint(InputAction.CallbackContext context)
     {
         Debug.Log(context);
         if (context.performed)
@@ -98,7 +99,7 @@ public class PlayerMove : MonoBehaviour
             speed *= 1.4f;
         }
     }
-
+   */
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.blue;
