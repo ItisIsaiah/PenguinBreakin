@@ -24,14 +24,21 @@ public class PlayerMove : MonoBehaviour
     public Transform swingPoint;
     public float swingRange;
     public LayerMask enemyLayers;
+    GameManager gm;
+    Vector3 direction;
+    public float health=100;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         Cursor.lockState = CursorLockMode.Locked;
-        controls.Controller.Walk.performed += ctx => move = ctx.ReadValue<Vector2>(); ;
+        
+        //controls.Controller.Walk.performed += ctx => { move = ctx.action.IsPressed() ? ctx.ReadValue<Vector2>() : Vector2.zero; Debug.Log(ctx.action.IsPressed()); };
+        controls.Controller.Walk.performed += ctx => move= ctx.ReadValue<Vector2>();
         controls.Controller.Walk.canceled += ctx => move = Vector2.zero;
         controls.Controller.Swing.performed += Swing;
+
+        
     }
 
     // Update is called once per frame
@@ -42,15 +49,24 @@ public class PlayerMove : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
         controls.Enable();
 
+        
     }
-
+    private void Update()
+    {
+         
+    }
     private void FixedUpdate()
     {
+        
+
+
+        //Debug.Log("WHY THE FUCK AM I MOVING "+move.x+" ON THE X and "+move.y+"ON THE Y");
         animator.SetFloat("Speed", rb.velocity.x+rb.velocity.z);
         // controls.Movement.Sprint.performed += Sprint;
-        Vector3 direction = new Vector3(move.x, 0f, move.y).normalized;
+
+        direction = new Vector3(move.x, 0f, move.y);
         float runAnim = Mathf.Abs(move.x + move.y);
-        if (move.magnitude != 0)
+        if (move.magnitude >= .3)
         {
            
 
@@ -59,7 +75,7 @@ public class PlayerMove : MonoBehaviour
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             transform.position += moveDir.normalized * speed * Time.deltaTime;
-            Debug.Log("moving");
+            
         }
 
 
@@ -72,8 +88,12 @@ public class PlayerMove : MonoBehaviour
         foreach(Collider penguin in hitPen)
         {
             PenguinBase pen = penguin.GetComponent<PenguinBase>();
-            pen.gotHit();
+            GameManager.Instance.mCaught++;
+
+            GameManager.Instance.UpdateUI();
             
+            pen.gotHit();
+           
         }
     }
 
@@ -89,7 +109,12 @@ public class PlayerMove : MonoBehaviour
 
 
    
-
+    public void takeHit(float damage)
+    {
+        health-=damage;
+        gm.UpdateUI();
+        Debug.Log("I took"+damage +"damage");
+    }
 
    /* void Sprint(InputAction.CallbackContext context)
     {

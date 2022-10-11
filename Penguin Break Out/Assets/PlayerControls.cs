@@ -32,8 +32,8 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""type"": ""Value"",
                     ""id"": ""55ebc30b-1733-4c91-b6ae-9a585dc455bd"",
                     ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": ""Hold(duration=0.1)"",
+                    ""processors"": ""StickDeadzone"",
+                    ""interactions"": """",
                     ""initialStateCheck"": true
                 },
                 {
@@ -41,7 +41,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""type"": ""Value"",
                     ""id"": ""e5dae769-7b23-435c-add9-8dd7cefbd154"",
                     ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
+                    ""processors"": ""StickDeadzone"",
                     ""interactions"": ""Hold(duration=0.1)"",
                     ""initialStateCheck"": true
                 },
@@ -66,20 +66,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
             ],
             ""bindings"": [
                 {
-                    ""name"": """",
-                    ""id"": ""a29a00d2-3ae8-4ec6-b088-9c31d39d44ef"",
-                    ""path"": ""<Gamepad>/leftStick"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Walk"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
                     ""name"": ""2D Vector"",
                     ""id"": ""011b8f7d-94ab-4e01-ab07-1c2745474ec9"",
-                    ""path"": ""2DVector"",
+                    ""path"": ""2DVector(mode=1)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -133,6 +122,17 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""4f58abb7-d57c-4e14-95c0-b06d8a58ecd2"",
+                    ""path"": ""<Gamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Walk"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""5a528209-ba11-4ce6-bc97-fa1e06b6513b"",
                     ""path"": ""<Gamepad>/rightStick"",
                     ""interactions"": """",
@@ -147,7 +147,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""id"": ""b86f61f2-4ed9-4c39-95cc-3c99bed869fd"",
                     ""path"": ""<Pointer>/delta"",
                     ""interactions"": """",
-                    ""processors"": """",
+                    ""processors"": ""NormalizeVector2"",
                     ""groups"": """",
                     ""action"": ""Look"",
                     ""isComposite"": false,

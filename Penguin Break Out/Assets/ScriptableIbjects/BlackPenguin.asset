@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: BlackPenguin
   m_EditorClassIdentifier: 
   myName: BlackPenguin
-  health: 3
+  health: 1
+  damage: 0.5
   scared: 0
   speed: 5
   aggressive: 0

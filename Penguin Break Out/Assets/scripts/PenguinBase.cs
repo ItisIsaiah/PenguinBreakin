@@ -6,14 +6,20 @@ using UnityEngine.AI;
 public class PenguinBase : MonoBehaviour
 {
     [SerializeField] PenguinScriptableObject penType;
-    [SerializeField] Transform[] path;
+    [SerializeField] Transform[] path;//The path that the penguin will walk on
+    [SerializeField] Transform[] scaredPoints;//The penguin will run to these if they are scared
     public NavMeshAgent agent;
     public FOV sight;
     public GameObject playerRef;
-    public int health = 1;
+    public float health = 10f;
     public int point;
     [Range(0f, 5f)]
     public float distanceFromPoint;
+
+
+    public Transform hitpoint;
+    float hitRadius;
+    LayerMask playerMask;
     public void Start()
     {
         health = penType.health;
@@ -29,13 +35,19 @@ public class PenguinBase : MonoBehaviour
          }
         else if (sight.canSee && Vector3.Distance(transform.position, playerRef.transform.position) > .5f && penType.scared)
         {
-            agent.radius = 10f;
+            int randomPoint=Random.Range(0,scaredPoints.Length-2);
+            if (randomPoint < scaredPoints.Length - 2) { agent.SetDestination(scaredPoints[randomPoint].position); }
+           
         }
-        if (sight.canSee && Vector3.Distance(transform.position, playerRef.transform.position) > .5f && penType.aggressive)
+        if (sight.canSee && Vector3.Distance(transform.position, playerRef.transform.position) > .2f && penType.aggressive)
         {
-            //hit em baby!
+            
+            StartCoroutine(hit());
+            int randomPoint = Random.Range(0, scaredPoints.Length - 2);
+            if (randomPoint < scaredPoints.Length - 2) { agent.SetDestination(scaredPoints[randomPoint].position); }
+
         }
-        else if (sight.canSee && Vector3.Distance(transform.position, playerRef.transform.position) > .5f && !penType.aggressive)
+        else if (sight.canSee && Vector3.Distance(transform.position, playerRef.transform.position) > .2f && !penType.aggressive)
         {
             //run
         }
@@ -70,7 +82,38 @@ public class PenguinBase : MonoBehaviour
         }
         #endregion
     }
+    
+    IEnumerator hit()
+    {
+       // StartCoroutine(DoRotationAtTargetDirection(playerRef.transform));
+        Collider[] hitboxes = Physics.OverlapSphere(hitpoint.position, hitRadius, playerMask);
 
+        foreach (Collider playerC in hitboxes)
+        {//Swing Animation
+            if (playerC.CompareTag("Player"))
+            {
+                PlayerMove playerScript = playerRef.GetComponent<PlayerMove>();
+                yield return new WaitForSeconds(.2f);
+                playerScript.takeHit(penType.damage);
+               
+            }
+        }
+    }
+
+    IEnumerator DoRotationAtTargetDirection(Transform opponentPlayer)
+    {
+        Quaternion targetRotation = Quaternion.identity;
+        do
+        {
+            Debug.Log("do rotation");
+            Vector3 targetDirection = opponentPlayer.position - transform.position;
+            targetRotation = Quaternion.LookRotation(targetDirection);
+            Quaternion nextRotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime);
+            transform.rotation = nextRotation;
+            yield return null;
+
+        } while (Quaternion.Angle(transform.localRotation, targetRotation) < 0.01f);
+    }
     public void gotHit()
     {
         Debug.Log("I got hit");
