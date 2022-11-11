@@ -120,6 +120,7 @@
 -define:ENABLE_TIMELINE
 -define:ENABLE_INPUT_SYSTEM
 -define:ENABLE_LEGACY_INPUT_MANAGER
+-define:UNITY_POST_PROCESSING_STACK_V2
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
 -r:"C:/Program Files/Unity/Hub/Editor/2022.1.10f1/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll"
@@ -326,6 +327,11 @@
 -r:"C:/Program Files/Unity/Hub/Editor/2022.1.10f1/Editor/Data/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.XPath.XDocument.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2022.1.10f1/Editor/Data/NetStandard/Extensions/2.0.0/System.Runtime.InteropServices.WindowsRuntime.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2022.1.10f1/Editor/Data/NetStandard/ref/2.1.0/netstandard.dll"
+-r:"C:/Users/zayfo/Documents/GitHub/PenguinBreakin/Penguin Break Out/Library/PackageCache/com.unity.burst@1.7.3/Unity.Burst.CodeGen/Unity.Burst.Cecil.dll"
+-r:"C:/Users/zayfo/Documents/GitHub/PenguinBreakin/Penguin Break Out/Library/PackageCache/com.unity.burst@1.7.3/Unity.Burst.CodeGen/Unity.Burst.Cecil.Mdb.dll"
+-r:"C:/Users/zayfo/Documents/GitHub/PenguinBreakin/Penguin Break Out/Library/PackageCache/com.unity.burst@1.7.3/Unity.Burst.CodeGen/Unity.Burst.Cecil.Pdb.dll"
+-r:"C:/Users/zayfo/Documents/GitHub/PenguinBreakin/Penguin Break Out/Library/PackageCache/com.unity.burst@1.7.3/Unity.Burst.CodeGen/Unity.Burst.Cecil.Rocks.dll"
+-r:"C:/Users/zayfo/Documents/GitHub/PenguinBreakin/Penguin Break Out/Library/PackageCache/com.unity.burst@1.7.3/Unity.Burst.Unsafe.dll"
 -r:"C:/Users/zayfo/Documents/GitHub/PenguinBreakin/Penguin Break Out/Library/PackageCache/com.unity.cinemachine@2.8.6/Runtime/ThirdParty/clipper_library.dll"
 -r:"C:/Users/zayfo/Documents/GitHub/PenguinBreakin/Penguin Break Out/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.0.2/Runtime/Newtonsoft.Json.dll"
 -r:"Library/Bee/artifacts/500b0aE.dag/Cinemachine.ref.dll"
@@ -333,16 +339,33 @@
 -r:"Library/Bee/artifacts/500b0aE.dag/Unity.2D.Tilemap.Editor.ref.dll"
 -r:"Library/Bee/artifacts/500b0aE.dag/Unity.2D.Tilemap.Extras.Editor.ref.dll"
 -r:"Library/Bee/artifacts/500b0aE.dag/Unity.2D.Tilemap.Extras.ref.dll"
+-r:"Library/Bee/artifacts/500b0aE.dag/Unity.Burst.Editor.ref.dll"
+-r:"Library/Bee/artifacts/500b0aE.dag/Unity.Burst.ref.dll"
 -r:"Library/Bee/artifacts/500b0aE.dag/Unity.InputSystem.ref.dll"
+-r:"Library/Bee/artifacts/500b0aE.dag/Unity.Mathematics.Editor.ref.dll"
+-r:"Library/Bee/artifacts/500b0aE.dag/Unity.Mathematics.ref.dll"
 -r:"Library/Bee/artifacts/500b0aE.dag/Unity.PlasticSCM.Editor.ref.dll"
+-r:"Library/Bee/artifacts/500b0aE.dag/Unity.Postprocessing.Editor.ref.dll"
+-r:"Library/Bee/artifacts/500b0aE.dag/Unity.Postprocessing.Runtime.ref.dll"
+-r:"Library/Bee/artifacts/500b0aE.dag/Unity.RenderPipelines.Core.Editor.ref.dll"
+-r:"Library/Bee/artifacts/500b0aE.dag/Unity.RenderPipelines.Core.Runtime.ref.dll"
+-r:"Library/Bee/artifacts/500b0aE.dag/Unity.RenderPipelines.Core.ShaderLibrary.ref.dll"
+-r:"Library/Bee/artifacts/500b0aE.dag/Unity.RenderPipelines.HighDefinition.Config.Runtime.ref.dll"
+-r:"Library/Bee/artifacts/500b0aE.dag/Unity.RenderPipelines.HighDefinition.Editor.ref.dll"
+-r:"Library/Bee/artifacts/500b0aE.dag/Unity.RenderPipelines.HighDefinition.Runtime.ref.dll"
+-r:"Library/Bee/artifacts/500b0aE.dag/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.ref.dll"
 -r:"Library/Bee/artifacts/500b0aE.dag/Unity.Rider.Editor.ref.dll"
+-r:"Library/Bee/artifacts/500b0aE.dag/Unity.Searcher.Editor.ref.dll"
 -r:"Library/Bee/artifacts/500b0aE.dag/Unity.Services.Core.Analytics.ref.dll"
 -r:"Library/Bee/artifacts/500b0aE.dag/Unity.Services.Core.Environments.ref.dll"
 -r:"Library/Bee/artifacts/500b0aE.dag/Unity.Services.Core.ref.dll"
+-r:"Library/Bee/artifacts/500b0aE.dag/Unity.ShaderGraph.Editor.ref.dll"
 -r:"Library/Bee/artifacts/500b0aE.dag/Unity.TextMeshPro.Editor.ref.dll"
 -r:"Library/Bee/artifacts/500b0aE.dag/Unity.TextMeshPro.ref.dll"
 -r:"Library/Bee/artifacts/500b0aE.dag/Unity.Timeline.Editor.ref.dll"
 -r:"Library/Bee/artifacts/500b0aE.dag/Unity.Timeline.ref.dll"
+-r:"Library/Bee/artifacts/500b0aE.dag/Unity.VisualEffectGraph.Editor.ref.dll"
+-r:"Library/Bee/artifacts/500b0aE.dag/Unity.VisualEffectGraph.Runtime.ref.dll"
 -r:"Library/Bee/artifacts/500b0aE.dag/Unity.VisualStudio.Editor.ref.dll"
 -r:"Library/Bee/artifacts/500b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/500b0aE.dag/UnityEditor.UI.ref.dll"
@@ -545,9 +568,6 @@
 "Assets/scripts/GameManager.cs"
 "Assets/scripts/PenguinBase.cs"
 "Assets/scripts/PlayerMove.cs"
-"Assets/ShaderForge/Example Assets/Scripts/EditorLabel.cs"
-"Assets/ShaderForge/Example Assets/Scripts/EnableCameraDepthInForward.cs"
-"Assets/ShaderForge/Example Assets/Scripts/SoftNormalsToVertexColor.cs"
 -langversion:9.0
 
 /deterministic
