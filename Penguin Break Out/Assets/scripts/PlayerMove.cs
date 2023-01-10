@@ -12,7 +12,7 @@ public class PlayerMove : MonoBehaviour
     float speed = 5f;
     [SerializeField]
     float smoothTurn = .5f;
-    Animator animator;
+    public Animator animator;
   
 
     PlayerControls controls;
@@ -61,7 +61,7 @@ public class PlayerMove : MonoBehaviour
 
 
         //Debug.Log("WHY THE FUCK AM I MOVING "+move.x+" ON THE X and "+move.y+"ON THE Y");
-        animator.SetFloat("Speed", rb.velocity.x+rb.velocity.z);
+        animator.SetFloat("Speed", move.magnitude);
         // controls.Movement.Sprint.performed += Sprint;
 
         direction = new Vector3(move.x, 0f, move.y);
@@ -95,6 +95,7 @@ public class PlayerMove : MonoBehaviour
             pen.gotHit();
            
         }
+
     }
 
 
