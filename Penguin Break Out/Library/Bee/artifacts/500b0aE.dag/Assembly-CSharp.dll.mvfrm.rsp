@@ -9,13 +9,14 @@ Library\Bee\artifacts\mvdfrm\Unity.Mathematics.ref.dll_0FB64E2CC5C7A67D.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.PlasticSCM.Editor.ref.dll_0C0A30695FB91F25.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.Postprocessing.Editor.ref.dll_D1864B9A6B87067F.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.Postprocessing.Runtime.ref.dll_C5B763359BEF003C.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.RenderPipeline.Universal.ShaderLibrary.ref.dll_4936863FD2AB6F8C.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.RenderPipelines.Core.Editor.ref.dll_25EEFCF0604AF7C0.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.RenderPipelines.Core.Runtime.ref.dll_ACACB976FE35066B.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.RenderPipelines.Core.ShaderLibrary.ref.dll_B268DC27AC2FEED9.mvfrm
-Library\Bee\artifacts\mvdfrm\Unity.RenderPipelines.HighDefinition.Config.Runtime.ref.dll_18DFE5787EAEFAE9.mvfrm
-Library\Bee\artifacts\mvdfrm\Unity.RenderPipelines.HighDefinition.Editor.ref.dll_F80E9E6E9EF9B4DA.mvfrm
-Library\Bee\artifacts\mvdfrm\Unity.RenderPipelines.HighDefinition.Runtime.ref.dll_7D9993F3BB8D62B1.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.ref.dll_6839394710A74199.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.RenderPipelines.Universal.Editor.ref.dll_8D8BECB769158252.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.RenderPipelines.Universal.Runtime.ref.dll_235DF31C118AA1B9.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.RenderPipelines.Universal.Shaders.ref.dll_63C602654FF93CEF.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.Rider.Editor.ref.dll_82DD26602537B210.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.Searcher.Editor.ref.dll_9323DC826CAA20FD.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.Services.Core.Analytics.ref.dll_3C2C679BE591812E.mvfrm

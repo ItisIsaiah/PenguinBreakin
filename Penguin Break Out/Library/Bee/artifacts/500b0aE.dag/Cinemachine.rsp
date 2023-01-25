@@ -123,11 +123,10 @@
 -define:UNITY_POST_PROCESSING_STACK_V2
 -define:CINEMACHINE_POST_PROCESSING_V2
 -define:CINEMACHINE_TIMELINE
--define:CINEMACHINE_HDRP
--define:CINEMACHINE_HDRP_7_3_1
 -define:CINEMACHINE_PHYSICS_2D
 -define:CINEMACHINE_PHYSICS
 -define:CINEMACHINE_UGUI
+-define:CINEMACHINE_LWRP_7_3_1
 -define:CINEMACHINE_UNITY_INPUTSYSTEM
 -define:CINEMACHINE_UNITY_ANIMATION
 -define:CINEMACHINE_UNITY_IMGUI
@@ -358,7 +357,7 @@
 -r:"Library/Bee/artifacts/500b0aE.dag/Unity.InputSystem.ref.dll"
 -r:"Library/Bee/artifacts/500b0aE.dag/Unity.Postprocessing.Runtime.ref.dll"
 -r:"Library/Bee/artifacts/500b0aE.dag/Unity.RenderPipelines.Core.Runtime.ref.dll"
--r:"Library/Bee/artifacts/500b0aE.dag/Unity.RenderPipelines.HighDefinition.Runtime.ref.dll"
+-r:"Library/Bee/artifacts/500b0aE.dag/Unity.RenderPipelines.Universal.Runtime.ref.dll"
 -r:"Library/Bee/artifacts/500b0aE.dag/Unity.Timeline.ref.dll"
 -r:"Library/Bee/artifacts/500b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/500b0aE.dag/UnityEngine.UI.ref.dll"

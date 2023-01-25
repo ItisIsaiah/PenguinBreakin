@@ -119,7 +119,7 @@
 -define:ENABLE_LEGACY_INPUT_MANAGER
 -define:UNITY_POST_PROCESSING_STACK_V2
 -define:VFX_HAS_TIMELINE
--define:VFX_HAS_HDRP
+-define:VFX_HAS_UNIVERSAL
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
 -r:"Assets/Plugins/GitHub/Editor/GitHub.Api.45.dll"
@@ -349,7 +349,6 @@
 -r:"C:/Users/zayfo/Documents/GitHub/PenguinBreakin/Penguin Break Out/Library/PackageCache/com.unity.collab-proxy@1.17.1/Lib/Editor/PlasticSCM/unityplastic.dll"
 -r:"C:/Users/zayfo/Documents/GitHub/PenguinBreakin/Penguin Break Out/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll"
 -r:"C:/Users/zayfo/Documents/GitHub/PenguinBreakin/Penguin Break Out/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.0.2/Runtime/Newtonsoft.Json.dll"
--r:"Library/Bee/artifacts/500b0aE.dag/Unity.RenderPipelines.HighDefinition.Runtime.ref.dll"
 -r:"Library/Bee/artifacts/500b0aE.dag/Unity.ShaderGraph.Editor.ref.dll"
 -r:"Library/Bee/artifacts/500b0aE.dag/Unity.Timeline.ref.dll"
 -r:"Library/Bee/artifacts/500b0aE.dag/Unity.VisualEffectGraph.Runtime.ref.dll"

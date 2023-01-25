@@ -2,12 +2,13 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 using TMPro;
-
+using System.Collections;
 public class GameManager : MonoBehaviour
 {
     public int mCaught;
     public int mTot;
     public TMP_Text monkeyCount;
+    public GameObject EndGameUI;
     public Slider s; 
     public PlayerMove player;
     // Start is called before the first frame update
@@ -33,14 +34,28 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         mCaught = 0;
-        mTot = 5;
+        mTot = 3;
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMove>();
+        EndGameUI.SetActive(false);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-       
+        if (mCaught == mTot)
+        {
+            
+        }
+    }
+
+    IEnumerator EndLevel()
+    {
+        EndGameUI.SetActive(true);
+
+        yield return new WaitForSeconds(.2f); 
+
+        
     }
 
     private void FixedUpdate()

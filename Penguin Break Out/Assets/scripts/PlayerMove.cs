@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
+using Cinemachine;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -27,12 +27,26 @@ public class PlayerMove : MonoBehaviour
     GameManager gm;
     Vector3 direction;
     public float health=100;
+
+    public GameObject captureBall;
+
+
+    public CinemachineFreeLook thirdP;
+    public CinemachineFreeLook spinView;
     // Start is called before the first frame update
+    
+    void OnEnable()
+    {
+        CameraSwitcher.Register(thirdP);
+        CameraSwitcher.Register(spinView);
+        controls.Enable();
+    }
+    
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         Cursor.lockState = CursorLockMode.Locked;
-        
+        CameraSwitcher.SwitchCamera(thirdP);
         //controls.Controller.Walk.performed += ctx => { move = ctx.action.IsPressed() ? ctx.ReadValue<Vector2>() : Vector2.zero; Debug.Log(ctx.action.IsPressed()); };
         controls.Controller.Walk.performed += ctx => move= ctx.ReadValue<Vector2>();
         controls.Controller.Walk.canceled += ctx => move = Vector2.zero;
@@ -62,6 +76,7 @@ public class PlayerMove : MonoBehaviour
 
         //Debug.Log("WHY THE FUCK AM I MOVING "+move.x+" ON THE X and "+move.y+"ON THE Y");
         animator.SetFloat("Speed", move.magnitude);
+       
         // controls.Movement.Sprint.performed += Sprint;
 
         direction = new Vector3(move.x, 0f, move.y);
@@ -80,29 +95,55 @@ public class PlayerMove : MonoBehaviour
 
 
     }
-    void Swing(InputAction.CallbackContext context)
+      void Swing(InputAction.CallbackContext context)
     {
-      
+        StartCoroutine(SwingAction());
+        Debug.Log("Swung the net");
+
+    }
+
+    IEnumerator SwingAction()
+    {
+        Debug.Log("Told to swing");
+        speed /= 10;
         animator.SetTrigger("Swing");
-       Collider[] hitPen= Physics.OverlapSphere(swingPoint.position,swingRange,enemyLayers);
-        foreach(Collider penguin in hitPen)
+        GameObject ball=Instantiate(captureBall, swingPoint.position, Quaternion.identity,transform);
+        
+        Collider[] hitPen = Physics.OverlapSphere(swingPoint.position, swingRange, enemyLayers);
+        foreach (Collider penguin in hitPen)
         {
-            PenguinBase pen = penguin.GetComponent<PenguinBase>();
-            GameManager.Instance.mCaught++;
+            if (penguin.tag == "Penguin")
+            {
+                Debug.Log("Swinging");
+                PenguinBase pen = penguin.GetComponent<PenguinBase>();
+                GameManager.Instance.mCaught++;
 
-            GameManager.Instance.UpdateUI();
-            
-            pen.gotHit();
-           
+                GameManager.Instance.UpdateUI();
+                pen.agent.speed = 0f;
+
+                ball.transform.parent = penguin.gameObject.transform;
+                ball.transform.localPosition = Vector3.zero;
+              
+               // Time.timeScale = 0;
+                CameraSwitcher.SwitchCamera(spinView);
+                spinView.LookAt = penguin.transform;
+                spinView.Follow = penguin.transform;
+                for (int i = 0; i <200 ; i++)
+                  {
+                spinView.m_XAxis.Value += 1;
+                yield return new WaitForSeconds(.01f);
+                  }
+                Time.timeScale = 1;
+                pen.gotHit();
+            }
         }
-
+        yield return new WaitForSeconds(.2f);
+        CameraSwitcher.SwitchCamera(thirdP);
+        speed *= 10;
+        Destroy(ball);
     }
 
 
-    void OnEnable()
-    {
-        controls.Enable();
-    }
     void OnDisable()
     {
         controls.Disable();
