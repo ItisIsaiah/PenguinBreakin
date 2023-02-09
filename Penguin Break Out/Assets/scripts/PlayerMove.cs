@@ -105,16 +105,17 @@ public class PlayerMove : MonoBehaviour
     IEnumerator SwingAction()
     {
         Debug.Log("Told to swing");
-        speed /= 10;
+      
         animator.SetTrigger("Swing");
         GameObject ball=Instantiate(captureBall, swingPoint.position, Quaternion.identity,transform);
         
         Collider[] hitPen = Physics.OverlapSphere(swingPoint.position, swingRange, enemyLayers);
         foreach (Collider penguin in hitPen)
         {
+            Debug.Log("hit something");
             if (penguin.tag == "Penguin")
             {
-                Debug.Log("Swinging");
+                
                 PenguinBase pen = penguin.GetComponent<PenguinBase>();
                 GameManager.Instance.mCaught++;
 
@@ -139,7 +140,7 @@ public class PlayerMove : MonoBehaviour
         }
         yield return new WaitForSeconds(.2f);
         CameraSwitcher.SwitchCamera(thirdP);
-        speed *= 10;
+      
         Destroy(ball);
     }
 
