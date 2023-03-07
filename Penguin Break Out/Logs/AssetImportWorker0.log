@@ -15,7 +15,7 @@ C:/Users/zayfo/Documents/GitHub/PenguinBreakin/Penguin Break Out
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-61851
+50602
 Successfully changed project path to: C:/Users/zayfo/Documents/GitHub/PenguinBreakin/Penguin Break Out
 C:/Users/zayfo/Documents/GitHub/PenguinBreakin/Penguin Break Out
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ C:/Users/zayfo/Documents/GitHub/PenguinBreakin/Penguin Break Out
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 121.50 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 103.16 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.1.10f1 (9aa0f82c4f96)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.1.10f1/Editor/Data/Resources/UnitySubsystems
@@ -63,96 +63,96 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.1.10f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.1.10f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.1.10f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56644
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56956
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.1.10f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.1.10f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.006164 seconds.
+Registered in 0.005748 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 117.27 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 126.02 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.716 seconds
+- Completed reload, in  0.741 seconds
 Domain Reload Profiling:
-	ReloadAssembly (716ms)
-		BeginReloadAssembly (77ms)
+	ReloadAssembly (742ms)
+		BeginReloadAssembly (72ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (531ms)
-			LoadAssemblies (74ms)
+		EndReloadAssembly (562ms)
+			LoadAssemblies (69ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (122ms)
-				TypeCache.Initialize (122ms)
-					TypeCache.ScanAssembly (120ms)
-				ResolveRequiredComponents (0ms)
+			SetupTypeCache (115ms)
+				TypeCache.Initialize (114ms)
+					TypeCache.ScanAssembly (112ms)
+				ResolveRequiredComponents (1ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (26ms)
-			SetupLoadedEditorAssemblies (331ms)
+			RebuildScriptCaches (28ms)
+			SetupLoadedEditorAssemblies (367ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (58ms)
-				SetLoadedEditorAssemblies (7ms)
-				RefreshPlugins (117ms)
+				InitializePlatformSupportModulesInManaged (70ms)
+				SetLoadedEditorAssemblies (8ms)
+				RefreshPlugins (126ms)
 				BeforeProcessingInitializeOnLoad (2ms)
-				ProcessInitializeOnLoadAttributes (102ms)
-				ProcessInitializeOnLoadMethodAttributes (45ms)
+				ProcessInitializeOnLoadAttributes (104ms)
+				ProcessInitializeOnLoadMethodAttributes (56ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.009338 seconds.
+Registered in 0.010396 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 114.93 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 103.21 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.659 seconds
+- Completed reload, in  1.551 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1660ms)
-		BeginReloadAssembly (252ms)
+	ReloadAssembly (1552ms)
+		BeginReloadAssembly (225ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (6ms)
+			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (139ms)
-		EndReloadAssembly (1293ms)
-			LoadAssemblies (100ms)
+			CreateAndSetChildDomain (133ms)
+		EndReloadAssembly (1199ms)
+			LoadAssemblies (84ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (301ms)
+			SetupTypeCache (305ms)
 				TypeCache.Initialize (290ms)
-					TypeCache.ScanAssembly (283ms)
-				ResolveRequiredComponents (11ms)
+					TypeCache.ScanAssembly (284ms)
+				ResolveRequiredComponents (15ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (117ms)
-			SetupLoadedEditorAssemblies (723ms)
+			RebuildScriptCaches (91ms)
+			SetupLoadedEditorAssemblies (666ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (12ms)
-				SetLoadedEditorAssemblies (7ms)
-				RefreshPlugins (115ms)
-				BeforeProcessingInitializeOnLoad (121ms)
-				ProcessInitializeOnLoadAttributes (378ms)
-				ProcessInitializeOnLoadMethodAttributes (83ms)
-				AfterProcessingInitializeOnLoad (7ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (5ms)
+				RefreshPlugins (103ms)
+				BeforeProcessingInitializeOnLoad (100ms)
+				ProcessInitializeOnLoadAttributes (355ms)
+				ProcessInitializeOnLoadMethodAttributes (84ms)
+				AfterProcessingInitializeOnLoad (6ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 2.13 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 1.28 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 4877 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 76 unused Assets / (2.4 MB). Loaded Objects now: 5382.
 Memory consumption went from 0.81 GB to 0.81 GB.
-Total: 4.371800 ms (FindLiveObjects: 0.438800 ms CreateObjectMapping: 0.115900 ms MarkObjects: 3.148100 ms  DeleteObjects: 0.667800 ms)
+Total: 4.462300 ms (FindLiveObjects: 0.408300 ms CreateObjectMapping: 0.127000 ms MarkObjects: 3.503600 ms  DeleteObjects: 0.422200 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -166,55 +166,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 814170.927435 seconds.
-  path: Assets/ScriptableIbjects/BlackPenguin.asset
-  artifactKey: Guid(bb8a8e5029cd2a44bb7ecdd693cecf9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ScriptableIbjects/BlackPenguin.asset using Guid(bb8a8e5029cd2a44bb7ecdd693cecf9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad361c24bcb7e2b06d3038de773662e9') in 0.037548 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/scripts/PenguinBase.cs
-  artifactKey: Guid(92975120775dd1d4e91e14bf90189c82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/scripts/PenguinBase.cs using Guid(92975120775dd1d4e91e14bf90189c82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6cff15e0733d46994a680d314f566e20') in 0.007941 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/ScriptableIbjects/RedPenguin.asset
-  artifactKey: Guid(5a50e52196800d34b9a08443e5b16c52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ScriptableIbjects/RedPenguin.asset using Guid(5a50e52196800d34b9a08443e5b16c52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5e5b79dee0a3cd78d93a528ea9a5c5a') in 0.005501 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 11.323585 seconds.
-  path: Assets/black.mat
-  artifactKey: Guid(716680250b811c940ac5da4e86f5fef8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/black.mat using Guid(716680250b811c940ac5da4e86f5fef8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f25aa6802094b6c417cd43f5f8eca4f') in 0.244838 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Playground.prefab
-  artifactKey: Guid(707e97736a519f34ca55fc4766ccaba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Playground.prefab using Guid(707e97736a519f34ca55fc4766ccaba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8af206b53e500dd254ad36c846e8b33e') in 0.028044 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/InputSystem.inputsettings.asset
-  artifactKey: Guid(f90e8208942d2414ab8595ea6a4cfda9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/InputSystem.inputsettings.asset using Guid(f90e8208942d2414ab8595ea6a4cfda9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d1d81f111ae17c021394565dd5636cc') in 0.006587 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/URP PipelineAsset_Renderer.asset
-  artifactKey: Guid(8927bc0d4b2349a4aa46b6ecc1c53a24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/URP PipelineAsset_Renderer.asset using Guid(8927bc0d4b2349a4aa46b6ecc1c53a24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e93e75231a8632c961670af170680087') in 0.006343 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/UniversalRenderPipelineGlobalSettings.asset
-  artifactKey: Guid(1c54167e7375ab643a8701b70d1f759b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UniversalRenderPipelineGlobalSettings.asset using Guid(1c54167e7375ab643a8701b70d1f759b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '352ad9395d3b47012ccc70ee5bbb9556') in 0.006571 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/red.mat
-  artifactKey: Guid(9b611427654a5154a93c56d6b9c5aaf2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/red.mat using Guid(9b611427654a5154a93c56d6b9c5aaf2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ff0590cfcb89745ae09b17862e434db') in 0.015989 seconds 
+  Time since last request: 84340.966416 seconds.
+  path: Assets/CreatedPipeple_Renderer.asset
+  artifactKey: Guid(692456f1b98f92f4f90fd3fd38edb7c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CreatedPipeple_Renderer.asset using Guid(692456f1b98f92f4f90fd3fd38edb7c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17496fa6e3cf190b4773f92fa1e2cd11') in 0.036986 seconds 
