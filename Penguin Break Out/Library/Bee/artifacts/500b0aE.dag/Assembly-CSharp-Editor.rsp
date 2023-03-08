@@ -352,9 +352,15 @@
 -r:"C:/Users/zayfo/Documents/GitHub/PenguinBreakin/Penguin Break Out/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.0.2/Runtime/Newtonsoft.Json.dll"
 -r:"Library/Bee/artifacts/500b0aE.dag/Assembly-CSharp-Editor-firstpass.ref.dll"
 -r:"Library/Bee/artifacts/500b0aE.dag/Assembly-CSharp.ref.dll"
+-r:"Library/Bee/artifacts/500b0aE.dag/CFXR.WelcomeScreen.ref.dll"
+-r:"Library/Bee/artifacts/500b0aE.dag/CFXRDemo.ref.dll"
+-r:"Library/Bee/artifacts/500b0aE.dag/CFXREditor.ref.dll"
+-r:"Library/Bee/artifacts/500b0aE.dag/CFXRRuntime.ref.dll"
 -r:"Library/Bee/artifacts/500b0aE.dag/Cinemachine.ref.dll"
 -r:"Library/Bee/artifacts/500b0aE.dag/com.unity.cinemachine.editor.ref.dll"
+-r:"Library/Bee/artifacts/500b0aE.dag/KinoBloom.Runtime.ref.dll"
 -r:"Library/Bee/artifacts/500b0aE.dag/PPv2URPConverters.ref.dll"
+-r:"Library/Bee/artifacts/500b0aE.dag/ToonyColorsPro.Demo.Editor.ref.dll"
 -r:"Library/Bee/artifacts/500b0aE.dag/Unity.2D.Tilemap.Editor.ref.dll"
 -r:"Library/Bee/artifacts/500b0aE.dag/Unity.2D.Tilemap.Extras.Editor.ref.dll"
 -r:"Library/Bee/artifacts/500b0aE.dag/Unity.2D.Tilemap.Extras.ref.dll"
@@ -398,7 +404,6 @@
 "Assets/NavMeshComponents/Editor/NavMeshModifierEditor.cs"
 "Assets/NavMeshComponents/Editor/NavMeshModifierVolumeEditor.cs"
 "Assets/NavMeshComponents/Editor/NavMeshSurfaceEditor.cs"
-"Assets/RetroAesthetics/Shaders/Editor/RetroSkyboxEditor.cs"
 -langversion:9.0
 
 /deterministic
