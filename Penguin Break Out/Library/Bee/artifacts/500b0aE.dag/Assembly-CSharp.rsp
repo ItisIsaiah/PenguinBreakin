@@ -411,15 +411,15 @@
 "Assets/NavMeshComponents/Scripts/NavMeshModifier.cs"
 "Assets/NavMeshComponents/Scripts/NavMeshModifierVolume.cs"
 "Assets/NavMeshComponents/Scripts/NavMeshSurface.cs"
-"Assets/PenguinScriptableObject.cs"
-"Assets/PlayerControls.cs"
 "Assets/scripts/CameraSwitcher.cs"
 "Assets/scripts/FOV.cs"
 "Assets/scripts/FreeLookAddOn.cs"
 "Assets/scripts/GameManager.cs"
 "Assets/scripts/PenguinBase.cs"
+"Assets/scripts/PenguinScriptableObject.cs"
+"Assets/scripts/PlayerControls.cs"
 "Assets/scripts/PlayerMove.cs"
-"Assets/SpinFunctionality.cs"
+"Assets/scripts/SpinFunctionality.cs"
 -langversion:9.0
 
 /deterministic
