@@ -13,25 +13,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 2
-  lastUpdatedAtString: 2023-04-19T01:28:12.235-04:00
-  initializedAtString: 2023-04-18T22:44:18.698-04:00
-  localBranches:
-  - name: Bubble-feature
-    tracking: origin/Bubble-feature
-  - name: CreatingFirstLevel
-    tracking: origin/CreatingFirstLevel
-  - name: main
-    tracking: origin/main
+  lastUpdatedAtString: 2023-04-20T13:43:00.936-04:00
+  initializedAtString: 2023-04-20T12:28:43.491-04:00
+  localBranches: []
   remoteBranches:
-  - name: origin/Bubble-feature
-    tracking: '[None]'
-  - name: origin/CreatingFirstLevel
-    tracking: '[None]'
   - name: origin/HEAD
-    tracking: '[None]'
-  - name: origin/main
-    tracking: '[None]'
-  - name: origin/ParticlesWhenCaught
     tracking: '[None]'
   remotes:
   - name: origin
@@ -42,59 +28,17 @@ MonoBehaviour:
     function: 0
     token: 
   localConfigBranches:
-    keys:
-    - Bubble-feature
-    - CreatingFirstLevel
-    - main
-    values:
-    - name: Bubble-feature
-      remote:
-        name: origin
-        url: https://github.com/ItisIsaiah/PenguinBreakin.git
-      trackingBranch: Bubble-feature
-    - name: CreatingFirstLevel
-      remote:
-        name: origin
-        url: https://github.com/ItisIsaiah/PenguinBreakin.git
-      trackingBranch: CreatingFirstLevel
-    - name: main
-      remote:
-        name: origin
-        url: https://github.com/ItisIsaiah/PenguinBreakin.git
-      trackingBranch: main
+    keys: []
+    values: []
   remoteConfigBranches:
     keys:
     - origin
     subKeys:
     - Values:
-      - Bubble-feature
-      - CreatingFirstLevel
       - HEAD
-      - main
-      - ParticlesWhenCaught
     subKeyValues:
     - Values:
-      - name: Bubble-feature
-        remote:
-          name: origin
-          url: https://github.com/ItisIsaiah/PenguinBreakin.git
-        trackingBranch: 
-      - name: CreatingFirstLevel
-        remote:
-          name: origin
-          url: https://github.com/ItisIsaiah/PenguinBreakin.git
-        trackingBranch: 
       - name: HEAD
-        remote:
-          name: origin
-          url: https://github.com/ItisIsaiah/PenguinBreakin.git
-        trackingBranch: 
-      - name: main
-        remote:
-          name: origin
-          url: https://github.com/ItisIsaiah/PenguinBreakin.git
-        trackingBranch: 
-      - name: ParticlesWhenCaught
         remote:
           name: origin
           url: https://github.com/ItisIsaiah/PenguinBreakin.git

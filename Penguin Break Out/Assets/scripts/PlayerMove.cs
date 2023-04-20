@@ -33,6 +33,12 @@ public class PlayerMove : MonoBehaviour
 
     public CinemachineFreeLook thirdP;
     public CinemachineFreeLook spinView;
+
+    public float jumpVelocity = 2f;
+    public float fallMultiplier = 2.5f;
+    public float lowJumpMultiplier=2;
+    bool isJumpPressed;
+    bool isGrounded;
     // Start is called before the first frame update
     
     void OnEnable()
@@ -49,10 +55,12 @@ public class PlayerMove : MonoBehaviour
         CameraSwitcher.SwitchCamera(thirdP);
         //controls.Controller.Walk.performed += ctx => { move = ctx.action.IsPressed() ? ctx.ReadValue<Vector2>() : Vector2.zero; Debug.Log(ctx.action.IsPressed()); };
         controls.Controller.Walk.performed += ctx => move= ctx.ReadValue<Vector2>();
-        controls.Controller.Walk.canceled += ctx => move = Vector2.zero;
+        controls.Controller.Walk.canceled += ctx => move = Vector3.zero;
         controls.Controller.Swing.performed += Swing;
+        controls.Controller.Jump.performed += Jump;
+        controls.Controller.Jump.canceled += Jump;
 
-        
+
     }
 
     // Update is called once per frame
@@ -67,7 +75,14 @@ public class PlayerMove : MonoBehaviour
     }
     private void Update()
     {
-         
+        if (rb.velocity.y < 0)
+        {
+            rb.velocity += Vector3.up * Physics.gravity.y*(fallMultiplier-1)*Time.deltaTime;
+        }
+        else if (rb.velocity.y > 0 && !isJumpPressed)
+        {
+            rb.velocity -= Vector3.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
+        }
     }
     private void FixedUpdate()
     {
@@ -95,13 +110,21 @@ public class PlayerMove : MonoBehaviour
 
 
     }
-      void Swing(InputAction.CallbackContext context)
+    void Swing(InputAction.CallbackContext context)
     {
         StartCoroutine(SwingAction());
         Debug.Log("Swung the net");
 
     }
 
+    void Jump(InputAction.CallbackContext context)
+    {
+        isJumpPressed = context.ReadValueAsButton();
+        Debug.Log(isJumpPressed);
+        rb.velocity = Vector3.up * jumpVelocity;
+    
+    }
+   
     IEnumerator SwingAction()
     {
         Debug.Log("Told to swing");
@@ -159,15 +182,7 @@ public class PlayerMove : MonoBehaviour
         Debug.Log("I took"+damage +"damage");
     }
 
-   /* void Sprint(InputAction.CallbackContext context)
-    {
-        Debug.Log(context);
-        if (context.performed)
-        {
-            speed *= 1.4f;
-        }
-    }
-   */
+   
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.blue;
