@@ -13,11 +13,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 2
-  lastUpdatedAtString: 2023-04-20T13:43:00.936-04:00
-  initializedAtString: 2023-04-20T12:28:43.491-04:00
-  localBranches: []
+  lastUpdatedAtString: 2023-04-25T11:52:57.993-04:00
+  initializedAtString: 2023-04-25T09:52:18.335-04:00
+  localBranches:
+  - name: CreatingFirstLevel
+    tracking: origin/CreatingFirstLevel
+  - name: main
+    tracking: origin/main
   remoteBranches:
+  - name: origin/CreatingFirstLevel
+    tracking: '[None]'
   - name: origin/HEAD
+    tracking: '[None]'
+  - name: origin/main
     tracking: '[None]'
   remotes:
   - name: origin
@@ -28,17 +36,41 @@ MonoBehaviour:
     function: 0
     token: 
   localConfigBranches:
-    keys: []
-    values: []
+    keys:
+    - CreatingFirstLevel
+    - main
+    values:
+    - name: CreatingFirstLevel
+      remote:
+        name: origin
+        url: https://github.com/ItisIsaiah/PenguinBreakin.git
+      trackingBranch: CreatingFirstLevel
+    - name: main
+      remote:
+        name: origin
+        url: https://github.com/ItisIsaiah/PenguinBreakin.git
+      trackingBranch: main
   remoteConfigBranches:
     keys:
     - origin
     subKeys:
     - Values:
+      - CreatingFirstLevel
       - HEAD
+      - main
     subKeyValues:
     - Values:
+      - name: CreatingFirstLevel
+        remote:
+          name: origin
+          url: https://github.com/ItisIsaiah/PenguinBreakin.git
+        trackingBranch: 
       - name: HEAD
+        remote:
+          name: origin
+          url: https://github.com/ItisIsaiah/PenguinBreakin.git
+        trackingBranch: 
+      - name: main
         remote:
           name: origin
           url: https://github.com/ItisIsaiah/PenguinBreakin.git

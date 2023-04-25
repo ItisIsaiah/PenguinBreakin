@@ -34,11 +34,14 @@ public class PlayerMove : MonoBehaviour
     public CinemachineFreeLook thirdP;
     public CinemachineFreeLook spinView;
 
+    public Transform[] groundPoints;
     public float jumpVelocity = 2f;
     public float fallMultiplier = 2.5f;
     public float lowJumpMultiplier=2;
+    public float groundRadius=.5f;
     bool isJumpPressed;
     bool isGrounded;
+    LayerMask ground;
     // Start is called before the first frame update
     
     void OnEnable()
@@ -119,23 +122,53 @@ public class PlayerMove : MonoBehaviour
 
     void Jump(InputAction.CallbackContext context)
     {
-        isJumpPressed = context.ReadValueAsButton();
-        Debug.Log(isJumpPressed);
-        rb.velocity = Vector3.up * jumpVelocity;
-    
+        foreach (Transform g in groundPoints) {
+            Collider[] c = Physics.OverlapSphere(g.position,groundRadius,ground);
+            if (c.Length > 0)
+            {
+                isGrounded = true;
+                break;
+            }
+            else
+            {
+                continue;
+            }
+
+        }
+        if (isGrounded) {
+            isJumpPressed = context.ReadValueAsButton();
+            Debug.Log(isJumpPressed);
+            rb.velocity = Vector3.up * jumpVelocity;
+            isGrounded = true;
+
+        }
+        else
+        {
+            Debug.Log("Not on ground");
+        }
     }
    
     IEnumerator SwingAction()
     {
-        Debug.Log("Told to swing");
+      //  Debug.Log("Told to swing");
       
         animator.SetTrigger("Swing");
         GameObject ball=Instantiate(captureBall, swingPoint.position, Quaternion.identity,transform);
         
         Collider[] hitPen = Physics.OverlapSphere(swingPoint.position, swingRange, enemyLayers);
+      
+        
+        
+        Collider[] test = Physics.OverlapSphere(swingPoint.position, swingRange);
+        foreach (Collider c in test)
+        {
+            Debug.Log(c.name);
+        }
+
+
         foreach (Collider penguin in hitPen)
         {
-            Debug.Log("hit something");
+           // Debug.Log("hit something");
             if (penguin.tag == "Penguin")
             {
                 
