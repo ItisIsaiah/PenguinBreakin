@@ -34,10 +34,11 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         mCaught = 0;
-        mTot = 3;
+       
+        mTot = GameObject.FindGameObjectsWithTag("Penguin").Length;
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMove>();
         EndGameUI.SetActive(false);
-        
+        UpdateUI();
     }
 
     // Update is called once per frame
@@ -45,7 +46,7 @@ public class GameManager : MonoBehaviour
     {
         if (mCaught == mTot)
         {
-            
+            StartCoroutine(EndLevel());
         }
     }
 
