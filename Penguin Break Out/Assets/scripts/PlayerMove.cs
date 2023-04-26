@@ -34,11 +34,14 @@ public class PlayerMove : MonoBehaviour
     public CinemachineFreeLook thirdP;
     public CinemachineFreeLook spinView;
 
+    public Transform[] groundPoints;
     public float jumpVelocity = 2f;
     public float fallMultiplier = 2.5f;
     public float lowJumpMultiplier=2;
+    public float groundRadius=.5f;
     bool isJumpPressed;
     bool isGrounded;
+    public LayerMask ground;
     // Start is called before the first frame update
     
     void OnEnable()
@@ -83,6 +86,7 @@ public class PlayerMove : MonoBehaviour
         {
             rb.velocity -= Vector3.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
         }
+        isGrounded = GroundCheck();
     }
     private void FixedUpdate()
     {
@@ -107,7 +111,7 @@ public class PlayerMove : MonoBehaviour
             transform.position += moveDir.normalized * speed * Time.deltaTime;
             
         }
-
+        
 
     }
     void Swing(InputAction.CallbackContext context)
@@ -117,25 +121,70 @@ public class PlayerMove : MonoBehaviour
 
     }
 
+    bool GroundCheck()
+    {
+        if (animator.GetBool("isJumping") == false)
+        {
+            foreach (Transform g in groundPoints)
+            {
+                Collider[] c = Physics.OverlapSphere(g.position, groundRadius, ground);
+                if (c.Length > 0)
+                {
+                    animator.SetBool("isGrounded", true);
+                    animator.SetBool("isJumping", false);
+                    animator.SetBool("isFalling", false);
+                    return true;
+                }
+            }
+        }
+        
+        if ((animator.GetBool("isJumping") == true && rb.velocity.y < 0) || rb.velocity.y < -2)
+        {
+            animator.SetBool("isGrounded", false);
+            animator.SetBool("isFalling", true);
+            animator.SetBool("isJumping", false);
+        }
+        return false;
+    }
     void Jump(InputAction.CallbackContext context)
     {
-        isJumpPressed = context.ReadValueAsButton();
-        Debug.Log(isJumpPressed);
-        rb.velocity = Vector3.up * jumpVelocity;
-    
+        Debug.Log("Pressed Jump");
+        isGrounded = GroundCheck();
+        if (isGrounded) {
+            animator.SetBool("isJumping", true);
+
+            isJumpPressed = context.ReadValueAsButton();
+            Debug.Log(isJumpPressed);
+            rb.velocity = Vector3.up * jumpVelocity;
+            isGrounded = true;
+
+        }
+        
+            
+        
     }
    
     IEnumerator SwingAction()
     {
-        Debug.Log("Told to swing");
+      //  Debug.Log("Told to swing");
       
         animator.SetTrigger("Swing");
         GameObject ball=Instantiate(captureBall, swingPoint.position, Quaternion.identity,transform);
         
         Collider[] hitPen = Physics.OverlapSphere(swingPoint.position, swingRange, enemyLayers);
+      
+        
+        
+        Collider[] test = Physics.OverlapSphere(swingPoint.position, swingRange);
+        foreach (Collider c in test)
+        {
+            Debug.Log(c.name);
+        }
+
+
         foreach (Collider penguin in hitPen)
         {
-            Debug.Log("hit something");
+           // Debug.Log("hit something");
             if (penguin.tag == "Penguin")
             {
                 
@@ -189,5 +238,11 @@ public class PlayerMove : MonoBehaviour
         if (swingPoint == null)
             return;
         Gizmos.DrawWireSphere(swingPoint.position,swingRange);
+        Gizmos.color = Color.yellow;
+        foreach (Transform t in groundPoints)
+        {
+            Gizmos.DrawWireSphere(t.position, groundRadius);
+        }
+
     }
 }

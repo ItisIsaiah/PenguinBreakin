@@ -13,35 +13,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 2
-<<<<<<< Updated upstream
-  lastUpdatedAtString: 2023-04-20T13:43:00.936-04:00
-  initializedAtString: 2023-04-20T12:28:43.491-04:00
-  localBranches: []
-  remoteBranches:
-  - name: origin/HEAD
-    tracking: '[None]'
-=======
-  lastUpdatedAtString: 2023-04-25T15:43:04.266-04:00
-  initializedAtString: 2023-04-25T15:41:46.095-04:00
+  lastUpdatedAtString: 2023-04-25T21:38:15.966-04:00
+  initializedAtString: 2023-04-25T20:47:28.142-04:00
   localBranches:
   - name: CreatingFirstLevel
     tracking: origin/CreatingFirstLevel
   - name: main
     tracking: origin/main
-  - name: ParticlesWhenCaught
-    tracking: origin/ParticlesWhenCaught
   remoteBranches:
-  - name: origin/Bubble-feature
-    tracking: '[None]'
   - name: origin/CreatingFirstLevel
     tracking: '[None]'
   - name: origin/HEAD
     tracking: '[None]'
   - name: origin/main
     tracking: '[None]'
-  - name: origin/ParticlesWhenCaught
-    tracking: '[None]'
->>>>>>> Stashed changes
   remotes:
   - name: origin
     url: https://github.com/ItisIsaiah/PenguinBreakin.git
@@ -51,14 +36,9 @@ MonoBehaviour:
     function: 0
     token: 
   localConfigBranches:
-<<<<<<< Updated upstream
-    keys: []
-    values: []
-=======
     keys:
     - CreatingFirstLevel
     - main
-    - ParticlesWhenCaught
     values:
     - name: CreatingFirstLevel
       remote:
@@ -70,58 +50,31 @@ MonoBehaviour:
         name: origin
         url: https://github.com/ItisIsaiah/PenguinBreakin.git
       trackingBranch: main
-    - name: ParticlesWhenCaught
-      remote:
-        name: origin
-        url: https://github.com/ItisIsaiah/PenguinBreakin.git
-      trackingBranch: ParticlesWhenCaught
->>>>>>> Stashed changes
   remoteConfigBranches:
     keys:
     - origin
     subKeys:
     - Values:
-<<<<<<< Updated upstream
-      - HEAD
-    subKeyValues:
-    - Values:
-=======
-      - Bubble-feature
       - CreatingFirstLevel
       - HEAD
       - main
-      - ParticlesWhenCaught
     subKeyValues:
     - Values:
-      - name: Bubble-feature
-        remote:
-          name: origin
-          url: https://github.com/ItisIsaiah/PenguinBreakin.git
-        trackingBranch: 
       - name: CreatingFirstLevel
         remote:
           name: origin
           url: https://github.com/ItisIsaiah/PenguinBreakin.git
         trackingBranch: 
->>>>>>> Stashed changes
       - name: HEAD
         remote:
           name: origin
           url: https://github.com/ItisIsaiah/PenguinBreakin.git
         trackingBranch: 
-<<<<<<< Updated upstream
-=======
       - name: main
         remote:
           name: origin
           url: https://github.com/ItisIsaiah/PenguinBreakin.git
         trackingBranch: 
-      - name: ParticlesWhenCaught
-        remote:
-          name: origin
-          url: https://github.com/ItisIsaiah/PenguinBreakin.git
-        trackingBranch: 
->>>>>>> Stashed changes
   configRemotes:
     keys:
     - origin

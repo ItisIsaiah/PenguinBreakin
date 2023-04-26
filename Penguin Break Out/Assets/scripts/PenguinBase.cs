@@ -16,12 +16,15 @@ public class PenguinBase : MonoBehaviour
     [Range(0f, 5f)]
     public float distanceFromPoint;
 
-
+    bool isDoingAction = false;
+    bool isWalkingToPoint;
     public Transform hitpoint;
     float hitRadius;
     LayerMask playerMask;
     public void Start()
     {
+        isDoingAction = false;
+        isWalkingToPoint = false;
         health = penType.health;
         playerRef = GameObject.FindGameObjectWithTag("Player");
         //agent = GetComponent<NavMeshAgent>();
@@ -30,24 +33,29 @@ public class PenguinBase : MonoBehaviour
     }
     private void Update()
     {
-        if (sight.canSee && Vector3.Distance(transform.position,playerRef.transform.position)>.5f&&!penType.scared) {
-            agent.SetDestination(playerRef.transform.position);
+        
+        if (sight.canSee && Vector3.Distance(transform.position,playerRef.transform.position)>.5f&&!penType.scared&&!isDoingAction) {
+           
+                agent.SetDestination(playerRef.transform.position);
+            isDoingAction = true;
          }
-        else if (sight.canSee && Vector3.Distance(transform.position, playerRef.transform.position) > .5f && penType.scared)
+        else if (sight.canSee && Vector3.Distance(transform.position, playerRef.transform.position) > .5f && penType.scared&&!isDoingAction)
         {
             int randomPoint=Random.Range(0,scaredPoints.Length-2);
             if (randomPoint < scaredPoints.Length - 2) { agent.SetDestination(scaredPoints[randomPoint].position); }
-           
+            isDoingAction = true;
+
         }
-        if (sight.canSee && Vector3.Distance(transform.position, playerRef.transform.position) > .2f && penType.aggressive)
+        if (sight.canSee && Vector3.Distance(transform.position, playerRef.transform.position) > .2f && penType.aggressive&&!isDoingAction)
         {
             
             StartCoroutine(hit());
             int randomPoint = Random.Range(0, scaredPoints.Length - 2);
             if (randomPoint < scaredPoints.Length - 2) { agent.SetDestination(scaredPoints[randomPoint].position); }
+            isDoingAction = true;
 
         }
-        else if (sight.canSee && Vector3.Distance(transform.position, playerRef.transform.position) > .2f && !penType.aggressive)
+        else if (sight.canSee && Vector3.Distance(transform.position, playerRef.transform.position) > .2f && !penType.aggressive&&!isDoingAction)
         {
             //run
         }
@@ -63,13 +71,13 @@ public class PenguinBase : MonoBehaviour
 
         if (!sight.canSee)
         {
-            if ( Vector3.Distance(transform.position, path[point].position) > distanceFromPoint)
+            if ( Vector3.Distance(transform.position, path[point].position) > distanceFromPoint && !isWalkingToPoint)
             {
                 agent.SetDestination(path[point].position);
-               
+                isWalkingToPoint = true;
             }
             
-            else if (Vector3.Distance(transform.position, path[point].position) < distanceFromPoint) {
+            else if (Vector3.Distance(transform.position, path[point].position) < distanceFromPoint  ) {
                 if (!(point >= path.Length-1))
                 {
                     point++;
@@ -78,9 +86,11 @@ public class PenguinBase : MonoBehaviour
                 {
                     point = 0;
                 }
+                isWalkingToPoint = false;
             }
         }
         #endregion
+        
     }
     
     IEnumerator hit()
@@ -116,7 +126,7 @@ public class PenguinBase : MonoBehaviour
     }
     public void gotHit()
     {
-        Debug.Log("I got hit");
+       // Debug.Log("I got hit");
         health--;
     }
     private void OnDrawGizmos()
