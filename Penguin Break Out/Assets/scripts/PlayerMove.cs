@@ -41,7 +41,7 @@ public class PlayerMove : MonoBehaviour
     public float groundRadius=.5f;
     bool isJumpPressed;
     bool isGrounded;
-    LayerMask ground;
+    public LayerMask ground;
     // Start is called before the first frame update
     
     void OnEnable()
@@ -86,6 +86,7 @@ public class PlayerMove : MonoBehaviour
         {
             rb.velocity -= Vector3.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
         }
+        isGrounded = GroundCheck();
     }
     private void FixedUpdate()
     {
@@ -110,7 +111,7 @@ public class PlayerMove : MonoBehaviour
             transform.position += moveDir.normalized * speed * Time.deltaTime;
             
         }
-
+        
 
     }
     void Swing(InputAction.CallbackContext context)
@@ -120,32 +121,47 @@ public class PlayerMove : MonoBehaviour
 
     }
 
+    bool GroundCheck()
+    {
+        if (animator.GetBool("isJumping") == false)
+        {
+            foreach (Transform g in groundPoints)
+            {
+                Collider[] c = Physics.OverlapSphere(g.position, groundRadius, ground);
+                if (c.Length > 0)
+                {
+                    animator.SetBool("isGrounded", true);
+                    animator.SetBool("isJumping", false);
+                    animator.SetBool("isFalling", false);
+                    return true;
+                }
+            }
+        }
+        
+        if ((animator.GetBool("isJumping") == true && rb.velocity.y < 0) || rb.velocity.y < -2)
+        {
+            animator.SetBool("isGrounded", false);
+            animator.SetBool("isFalling", true);
+            animator.SetBool("isJumping", false);
+        }
+        return false;
+    }
     void Jump(InputAction.CallbackContext context)
     {
-        foreach (Transform g in groundPoints) {
-            Collider[] c = Physics.OverlapSphere(g.position,groundRadius,ground);
-            if (c.Length > 0)
-            {
-                isGrounded = true;
-                break;
-            }
-            else
-            {
-                continue;
-            }
-
-        }
+        Debug.Log("Pressed Jump");
+        isGrounded = GroundCheck();
         if (isGrounded) {
+            animator.SetBool("isJumping", true);
+
             isJumpPressed = context.ReadValueAsButton();
             Debug.Log(isJumpPressed);
             rb.velocity = Vector3.up * jumpVelocity;
             isGrounded = true;
 
         }
-        else
-        {
-            Debug.Log("Not on ground");
-        }
+        
+            
+        
     }
    
     IEnumerator SwingAction()
@@ -222,5 +238,11 @@ public class PlayerMove : MonoBehaviour
         if (swingPoint == null)
             return;
         Gizmos.DrawWireSphere(swingPoint.position,swingRange);
+        Gizmos.color = Color.yellow;
+        foreach (Transform t in groundPoints)
+        {
+            Gizmos.DrawWireSphere(t.position, groundRadius);
+        }
+
     }
 }
