@@ -11,7 +11,10 @@ public class GameManager : MonoBehaviour
     public GameObject EndGameUI;
     public Slider s; 
     public PlayerMove player;
+
+    LevelScriptableObject myLev;
     // Start is called before the first frame update
+
 
     #region SingleTon
     public static GameManager Instance { get; private set; }
@@ -35,6 +38,7 @@ public class GameManager : MonoBehaviour
     {
         mCaught = 0;
         mTot = 3;
+      //  mTot = myLev.monkeysRequired;
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMove>();
         EndGameUI.SetActive(false);
         
@@ -45,17 +49,18 @@ public class GameManager : MonoBehaviour
     {
         if (mCaught == mTot)
         {
-            
+            StartCoroutine(EndLevel());
         }
     }
 
     IEnumerator EndLevel()
     {
         EndGameUI.SetActive(true);
-
-        yield return new WaitForSeconds(.2f); 
-
         
+        yield return new WaitForSeconds(3f);
+        myLev.Completed = true;
+        SuperGameManager.Instance.copyData(myLev);
+        SceneManager.LoadScene("HubWorld");
     }
 
     private void FixedUpdate()
@@ -67,5 +72,15 @@ public class GameManager : MonoBehaviour
     {
         s.value = player.health;
         monkeyCount.text = mCaught + "/" + mTot;
+    }
+
+    public void AddScore(string monName)
+    {
+        mCaught++;
+       /* if(!myLev.uniqueMonkeys.Contains(monName))
+            myLev.uniqueMonkeys.Add(monName);
+            myLev.uniqueCaughtNum = myLev.uniqueMonkeys.Count;
+        UpdateUI();
+       */
     }
 }

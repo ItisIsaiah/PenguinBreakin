@@ -121,6 +121,7 @@
 -define:ENABLE_INPUT_SYSTEM
 -define:ENABLE_LEGACY_INPUT_MANAGER
 -define:UNITY_POST_PROCESSING_STACK_V2
+-define:PROBUILDER_EXPERIMENTAL_FEATURES
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
 -r:"C:/Program Files/Unity/Hub/Editor/2022.1.10f1/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll"
@@ -356,6 +357,10 @@
 -r:"Library/Bee/artifacts/500b0aE.dag/Unity.PlasticSCM.Editor.ref.dll"
 -r:"Library/Bee/artifacts/500b0aE.dag/Unity.Postprocessing.Editor.ref.dll"
 -r:"Library/Bee/artifacts/500b0aE.dag/Unity.Postprocessing.Runtime.ref.dll"
+-r:"Library/Bee/artifacts/500b0aE.dag/Unity.ProBuilder.AddOns.Editor.ref.dll"
+-r:"Library/Bee/artifacts/500b0aE.dag/Unity.ProBuilder.AssetIdRemapUtility.ref.dll"
+-r:"Library/Bee/artifacts/500b0aE.dag/Unity.ProBuilder.Editor.ref.dll"
+-r:"Library/Bee/artifacts/500b0aE.dag/Unity.ProBuilder.ref.dll"
 -r:"Library/Bee/artifacts/500b0aE.dag/Unity.RenderPipeline.Universal.ShaderLibrary.ref.dll"
 -r:"Library/Bee/artifacts/500b0aE.dag/Unity.RenderPipelines.Core.Editor.ref.dll"
 -r:"Library/Bee/artifacts/500b0aE.dag/Unity.RenderPipelines.Core.Runtime.ref.dll"
@@ -397,6 +402,7 @@
 "Assets/Hovl Studio/Resources/Scripts/ProjectileMover.cs"
 "Assets/Hovl Studio/Resources/Scripts/ProjectileMover2D.cs"
 "Assets/Hovl Studio/Resources/Scripts/Rotator.cs"
+"Assets/interactableObject.cs"
 "Assets/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_AutoStopLoopedEffect.cs"
 "Assets/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_New.cs"
 "Assets/JMO Assets/Cartoon FX (legacy)/Demo/Assets/CFX_Demo_RandomDir.cs"
@@ -411,15 +417,20 @@
 "Assets/NavMeshComponents/Scripts/NavMeshModifier.cs"
 "Assets/NavMeshComponents/Scripts/NavMeshModifierVolume.cs"
 "Assets/NavMeshComponents/Scripts/NavMeshSurface.cs"
+"Assets/PauseMenu.cs"
+"Assets/PinkPenguin.cs"
 "Assets/PlayerControls.cs"
 "Assets/scripts/CameraSwitcher.cs"
 "Assets/scripts/FOV.cs"
 "Assets/scripts/FreeLookAddOn.cs"
 "Assets/scripts/GameManager.cs"
+"Assets/scripts/LevelInteraction.cs"
+"Assets/scripts/LevelScriptableObject.cs"
 "Assets/scripts/PenguinBase.cs"
 "Assets/scripts/PenguinScriptableObject.cs"
 "Assets/scripts/PlayerMove.cs"
 "Assets/scripts/SpinFunctionality.cs"
+"Assets/scripts/SuperGameManager.cs"
 -langversion:9.0
 
 /deterministic

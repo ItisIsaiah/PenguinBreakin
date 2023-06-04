@@ -42,8 +42,12 @@ public class PlayerMove : MonoBehaviour
     bool isJumpPressed;
     bool isGrounded;
     public LayerMask ground;
+
+    public bool penBlocked;
     // Start is called before the first frame update
-    
+
+    //handled by interactable script
+    public bool interactionCheck;
     void OnEnable()
     {
         CameraSwitcher.Register(thirdP);
@@ -116,8 +120,16 @@ public class PlayerMove : MonoBehaviour
     }
     void Swing(InputAction.CallbackContext context)
     {
-        StartCoroutine(SwingAction());
-        Debug.Log("Swung the net");
+        if (interactionCheck)
+        {
+            Interaction();
+        }
+        else
+        {
+
+            StartCoroutine(SwingAction());
+            Debug.Log("Swung the net");
+        }
 
     }
 
@@ -189,25 +201,34 @@ public class PlayerMove : MonoBehaviour
             {
                 
                 PenguinBase pen = penguin.GetComponent<PenguinBase>();
-                GameManager.Instance.mCaught++;
+               
+                GameManager.Instance.AddScore(pen.penType.myName);
 
-                GameManager.Instance.UpdateUI();
-                pen.agent.speed = 0f;
+                pen.StartCoroutine(pen.gotHit());
+                if (!penBlocked)
+                {
 
-                ball.transform.parent = penguin.gameObject.transform;
-                ball.transform.localPosition = Vector3.zero;
-              
-               // Time.timeScale = 0;
-                CameraSwitcher.SwitchCamera(spinView);
-                spinView.LookAt = penguin.transform;
-                spinView.Follow = penguin.transform;
-                for (int i = 0; i <200 ; i++)
-                  {
-                spinView.m_XAxis.Value += 1;
-                yield return new WaitForSeconds(.01f);
-                  }
-                Time.timeScale = 1;
-                pen.gotHit();
+                    pen.agent.speed = 0f;
+
+                    ball.transform.parent = penguin.gameObject.transform;
+                    ball.transform.localPosition = Vector3.zero;
+
+                    // Time.timeScale = 0;
+                    CameraSwitcher.SwitchCamera(spinView);
+                    spinView.LookAt = penguin.transform;
+                    spinView.Follow = penguin.transform;
+                    for (int i = 0; i < 200; i++)
+                    {
+                        spinView.m_XAxis.Value += 1;
+                        yield return new WaitForSeconds(.01f);
+                    }
+                    Time.timeScale = 1;
+                    pen.penLock = true;
+                }
+                else
+                {
+                    Debug.Log("He blocked me");
+                }
             }
         }
         yield return new WaitForSeconds(.2f);
@@ -216,6 +237,12 @@ public class PlayerMove : MonoBehaviour
         Destroy(ball);
     }
 
+    void Interaction()
+    {
+        Debug.Log("Im interacting with something");
+
+        //Call lore function in the inanimate object?
+    }
 
     void OnDisable()
     {
