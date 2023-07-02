@@ -7,20 +7,20 @@ public class PinkPenguin : PenguinBase
     bool foundMyMatch;
     public  GameObject PenguinPair;
     // Start is called before the first frame update
-    void Start()
+    public override void Start()
     {
         base.Start();
-        FOV v = GetComponent<FOV>();
-        v.playerRef = PenguinPair;
+        sight.target = PenguinPair;
        
     }
 
     // Update is called once per frame
-    void Update()
+    public override void  Update()
     {
-        if (sight.canSee && Vector3.Distance(transform.position, PenguinPair.transform.position) > .5f)
+        if (sight.canSee && Vector3.Distance(transform.position, PenguinPair.transform.position) > .2f)
         {
             agent.SetDestination(PenguinPair.transform.position);
+            
         }
     }
 

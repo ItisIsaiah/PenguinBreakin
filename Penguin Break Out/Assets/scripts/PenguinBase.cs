@@ -23,6 +23,8 @@ public class PenguinBase : MonoBehaviour
     LayerMask playerMask;
 
     public bool penLock = false;
+
+   
     virtual public void Start()
     {
         isDoingAction = false;
@@ -33,7 +35,7 @@ public class PenguinBase : MonoBehaviour
         sight = GetComponent<FOV>();
         point = 0;
     }
-    private void Update()
+    public virtual void Update()
     {
         
         if (sight.canSee && Vector3.Distance(transform.position,playerRef.transform.position)>.5f&&!penType.scared&&!isDoingAction) {

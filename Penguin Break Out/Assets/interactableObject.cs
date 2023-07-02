@@ -4,31 +4,16 @@ using UnityEngine;
 
 public class interactableObject : MonoBehaviour
 {
-    GameObject[] pensToLore;
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            PlayerMove p = other.GetComponent<PlayerMove>();
-            p.interactionCheck = true;
-        }
-    }
+    public GameObject[] pensToLore;
+    
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            PlayerMove p = other.GetComponent<PlayerMove>();
-            p.interactionCheck = false;
-        }
-    }
-
-    void Lore() {
+    public void Lore() {
 
         foreach (GameObject p in pensToLore)
         {
             PinkPenguin pen = p.GetComponent<PinkPenguin>();
             pen.agent.SetDestination(transform.position);
         }
+        tag = "Completed Interaction";
     }
 }

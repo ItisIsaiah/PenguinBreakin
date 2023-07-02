@@ -11,7 +11,7 @@ public class FOV : MonoBehaviour
     public float angle;
     public float radius;
     public bool canSee;
-    public GameObject playerRef;
+    public GameObject target;
 
     [SerializeField]
     LayerMask targetMask;
@@ -21,8 +21,10 @@ public class FOV : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      
-        playerRef = GameObject.FindGameObjectWithTag("Player");
+        if (target == null) {
+            target = GameObject.FindGameObjectWithTag("Player");
+        }
+       
         StartCoroutine(FOVRoutine());
     }
 

@@ -4,15 +4,37 @@ using UnityEngine;
 
 public class PauseMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static bool isPaused = false;
+    public GameObject pmUI;
+    private void Start()
     {
-        
+        pmUI.SetActive(false);
+    }
+    public void PauseSwitch()
+    {
+        Debug.Log("RECIEVED SIGNAL");
+        if (isPaused)
+        {
+            Resume();
+        }
+        else
+        {
+            Pause();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    void Resume()
     {
-        
+        pmUI.SetActive(false);
+        Time.timeScale = 1f;
+        isPaused = false;
     }
+
+  void Pause()
+    {
+        pmUI.SetActive(true);
+        Time.timeScale = 0f;
+        isPaused = true;
+    }
+
 }
