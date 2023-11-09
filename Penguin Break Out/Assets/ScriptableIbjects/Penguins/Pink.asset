@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Pink
   m_EditorClassIdentifier: 
   myName: 
-  health: 3
+  health: 1
   damage: 0.5
   scared: 0
   speed: 5

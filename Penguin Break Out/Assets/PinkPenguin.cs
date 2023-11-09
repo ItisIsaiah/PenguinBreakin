@@ -22,6 +22,10 @@ public class PinkPenguin : PenguinBase
             agent.SetDestination(PenguinPair.transform.position);
             
         }
+        if (health == 0)
+        {
+            Dead();
+        }
     }
 
     public void Lore(Transform loc)

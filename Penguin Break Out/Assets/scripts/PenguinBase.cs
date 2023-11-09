@@ -23,7 +23,7 @@ public class PenguinBase : MonoBehaviour
     LayerMask playerMask;
 
     public bool penLock = false;
-
+    string myName="Pen?";
    
     virtual public void Start()
     {
@@ -66,10 +66,7 @@ public class PenguinBase : MonoBehaviour
 
        
 
-        if (health == 0)
-        {
-            Destroy(this.gameObject);
-        }
+       
 
         #region path code
 
@@ -135,7 +132,18 @@ public class PenguinBase : MonoBehaviour
         yield return new WaitUntil(()=>penLock==true);
        // Debug.Log("I got hit");
         health--;
+        if (health == 0)
+        {
+            Dead();
+        }
         penLock = false;
+    }
+
+    public string Dead()
+    {
+        Debug.Log("SHOULD BE FUCKING DEAD");
+        Destroy(gameObject);
+        return myName;
     }
     private void OnDrawGizmos()
     {
