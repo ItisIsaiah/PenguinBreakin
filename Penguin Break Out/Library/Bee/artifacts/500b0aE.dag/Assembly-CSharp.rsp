@@ -121,6 +121,7 @@
 -define:ENABLE_INPUT_SYSTEM
 -define:ENABLE_LEGACY_INPUT_MANAGER
 -define:UNITY_POST_PROCESSING_STACK_V2
+-define:PROBUILDER_EXPERIMENTAL_FEATURES
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
 -r:"C:/GitHub/PenguinBreakin/Penguin Break Out/Library/PackageCache/com.unity.burst@1.7.3/Unity.Burst.CodeGen/Unity.Burst.Cecil.dll"
@@ -354,6 +355,10 @@
 -r:"Library/Bee/artifacts/500b0aE.dag/Unity.PlasticSCM.Editor.ref.dll"
 -r:"Library/Bee/artifacts/500b0aE.dag/Unity.Postprocessing.Editor.ref.dll"
 -r:"Library/Bee/artifacts/500b0aE.dag/Unity.Postprocessing.Runtime.ref.dll"
+-r:"Library/Bee/artifacts/500b0aE.dag/Unity.ProBuilder.AddOns.Editor.ref.dll"
+-r:"Library/Bee/artifacts/500b0aE.dag/Unity.ProBuilder.AssetIdRemapUtility.ref.dll"
+-r:"Library/Bee/artifacts/500b0aE.dag/Unity.ProBuilder.Editor.ref.dll"
+-r:"Library/Bee/artifacts/500b0aE.dag/Unity.ProBuilder.ref.dll"
 -r:"Library/Bee/artifacts/500b0aE.dag/Unity.RenderPipeline.Universal.ShaderLibrary.ref.dll"
 -r:"Library/Bee/artifacts/500b0aE.dag/Unity.RenderPipelines.Core.Editor.ref.dll"
 -r:"Library/Bee/artifacts/500b0aE.dag/Unity.RenderPipelines.Core.Runtime.ref.dll"
@@ -409,15 +414,21 @@
 "Assets/NavMeshComponents/Scripts/NavMeshModifier.cs"
 "Assets/NavMeshComponents/Scripts/NavMeshModifierVolume.cs"
 "Assets/NavMeshComponents/Scripts/NavMeshSurface.cs"
+"Assets/PinkPenguin.cs"
 "Assets/PlayerControls.cs"
 "Assets/scripts/CameraSwitcher.cs"
 "Assets/scripts/FOV.cs"
 "Assets/scripts/FreeLookAddOn.cs"
 "Assets/scripts/GameManager.cs"
+"Assets/scripts/interactableObject.cs"
+"Assets/scripts/LevelInteraction.cs"
+"Assets/scripts/LevelScriptableObject.cs"
+"Assets/scripts/PauseMenu.cs"
 "Assets/scripts/PenguinBase.cs"
 "Assets/scripts/PenguinScriptableObject.cs"
 "Assets/scripts/PlayerMove.cs"
 "Assets/scripts/SpinFunctionality.cs"
+"Assets/scripts/SuperGameManager.cs"
 -langversion:9.0
 
 /deterministic

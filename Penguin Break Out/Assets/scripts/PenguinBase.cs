@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class PenguinBase : MonoBehaviour
 {
-    [SerializeField] PenguinScriptableObject penType;
+     public PenguinScriptableObject penType;
     [SerializeField] Transform[] path;//The path that the penguin will walk on
     [SerializeField] Transform[] scaredPoints;//The penguin will run to these if they are scared
     public NavMeshAgent agent;
@@ -21,7 +21,11 @@ public class PenguinBase : MonoBehaviour
     public Transform hitpoint;
     float hitRadius;
     LayerMask playerMask;
-    public void Start()
+
+    public bool penLock = false;
+    string myName="Pen?";
+   
+    virtual public void Start()
     {
         isDoingAction = false;
         isWalkingToPoint = false;
@@ -31,7 +35,7 @@ public class PenguinBase : MonoBehaviour
         sight = GetComponent<FOV>();
         point = 0;
     }
-    private void Update()
+    public virtual void Update()
     {
         
         if (sight.canSee && Vector3.Distance(transform.position,playerRef.transform.position)>.5f&&!penType.scared&&!isDoingAction) {
@@ -62,10 +66,7 @@ public class PenguinBase : MonoBehaviour
 
        
 
-        if (health == 0)
-        {
-            Destroy(this.gameObject);
-        }
+       
 
         #region path code
 
@@ -93,7 +94,7 @@ public class PenguinBase : MonoBehaviour
         
     }
     
-    IEnumerator hit()
+     IEnumerator hit()
     {
        // StartCoroutine(DoRotationAtTargetDirection(playerRef.transform));
         Collider[] hitboxes = Physics.OverlapSphere(hitpoint.position, hitRadius, playerMask);
@@ -123,11 +124,26 @@ public class PenguinBase : MonoBehaviour
             yield return null;
 
         } while (Quaternion.Angle(transform.localRotation, targetRotation) < 0.01f);
+
+        
     }
-    public void gotHit()
+    public virtual IEnumerator gotHit()
     {
+        yield return new WaitUntil(()=>penLock==true);
        // Debug.Log("I got hit");
         health--;
+        if (health == 0)
+        {
+            Dead();
+        }
+        penLock = false;
+    }
+
+    public string Dead()
+    {
+        Debug.Log("SHOULD BE FUCKING DEAD");
+        Destroy(gameObject);
+        return myName;
     }
     private void OnDrawGizmos()
     {

@@ -6,7 +6,19 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 3db1837cc97a95e4c98610966fac2b0b
+    path: Assets/Scenes/HubWorld.unity
+    guid: 61e3c6de1bed87e419c07f5eb6d5f151
+  - enabled: 1
+    path: Assets/Scenes/Iceberg Arena.unity
+    guid: a0b2c9d1b69c0c14f9c17d9638b0f661
+  - enabled: 1
+    path: Assets/Scenes/Frosty Builders.unity
+    guid: 36e92f2f6c1b1d340a66963a4d46018c
+  - enabled: 1
+    path: Assets/Scenes/Penguin Playland.unity
+    guid: b8647aedec814df418f4971399626f17
+  - enabled: 1
+    path: Assets/Scenes/Snowflake Gardens.unity
+    guid: b06bea6ccf48019438d8aef886fae1a5
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: f90e8208942d2414ab8595ea6a4cfda9, type: 2}

@@ -29,6 +29,7 @@ public class PlayerMove : MonoBehaviour
     public float health=100;
 
     public GameObject captureBall;
+    public ParticleSystem sparks;
 
 
     public CinemachineFreeLook thirdP;
@@ -42,8 +43,21 @@ public class PlayerMove : MonoBehaviour
     bool isJumpPressed;
     bool isGrounded;
     public LayerMask ground;
-    // Start is called before the first frame update
     
+    [HideInInspector]
+    public bool penBlocked;
+    [HideInInspector]
+    public interactableObject interact;
+    // Start is called before the first frame update
+
+    //handled by interactable script
+    public PauseMenu pm;
+    public bool interactionCheck;
+
+
+    public int vaultLayer;
+    float pHeight;
+    float pRadius;
     void OnEnable()
     {
         CameraSwitcher.Register(thirdP);
@@ -53,6 +67,12 @@ public class PlayerMove : MonoBehaviour
     
     void Start()
     {
+        vaultLayer = LayerMask.NameToLayer("VaultLayer");
+        vaultLayer = ~vaultLayer;
+        pHeight = GetComponent<CapsuleCollider>().height;
+        pRadius = GetComponent<CapsuleCollider>().radius;
+
+
         rb = GetComponent<Rigidbody>();
         Cursor.lockState = CursorLockMode.Locked;
         CameraSwitcher.SwitchCamera(thirdP);
@@ -62,7 +82,7 @@ public class PlayerMove : MonoBehaviour
         controls.Controller.Swing.performed += Swing;
         controls.Controller.Jump.performed += Jump;
         controls.Controller.Jump.canceled += Jump;
-
+        controls.Controller.Pause.performed += Pause;
 
     }
 
@@ -76,6 +96,7 @@ public class PlayerMove : MonoBehaviour
 
         
     }
+
     private void Update()
     {
         if (rb.velocity.y < 0)
@@ -88,6 +109,7 @@ public class PlayerMove : MonoBehaviour
         }
         isGrounded = GroundCheck();
     }
+
     private void FixedUpdate()
     {
         
@@ -114,10 +136,25 @@ public class PlayerMove : MonoBehaviour
         
 
     }
+
+
+    void Pause(InputAction.CallbackContext context)
+    {
+        Debug.Log("Paused");
+        pm.PauseSwitch();
+    }
     void Swing(InputAction.CallbackContext context)
     {
-        StartCoroutine(SwingAction());
-        Debug.Log("Swung the net");
+        if (interactionCheck)
+        {
+            Interaction();
+        }
+        else
+        {
+
+            StartCoroutine(SwingAction());
+            Debug.Log("Swung the net");
+        }
 
     }
 
@@ -146,24 +183,39 @@ public class PlayerMove : MonoBehaviour
         }
         return false;
     }
+
     void Jump(InputAction.CallbackContext context)
     {
-        Debug.Log("Pressed Jump");
-        isGrounded = GroundCheck();
-        if (isGrounded) {
-            animator.SetBool("isJumping", true);
+        if (Physics.Raycast(this.transform.position, cam.transform.forward, out var first, 1f, vaultLayer))
+        {
+            Debug.Log("vaultable");
+            if (Physics.Raycast(first.point + (transform.forward * pRadius) + (Vector3.up * .6f * pHeight), Vector3.down, out var secondHit, pHeight))
+            {
 
-            isJumpPressed = context.ReadValueAsButton();
-            Debug.Log(isJumpPressed);
-            rb.velocity = Vector3.up * jumpVelocity;
-            isGrounded = true;
+            }
 
         }
-        
+        else
+        {
+            Debug.Log("Pressed Jump");
+            isGrounded = GroundCheck();
+            if (isGrounded)
+            {
+                animator.SetBool("isJumping", true);
+
+                isJumpPressed = context.ReadValueAsButton();
+                Debug.Log(isJumpPressed);
+                rb.velocity = Vector3.up * jumpVelocity;
+                isGrounded = true;
+
+            }
+        }
             
         
     }
    
+    
+    //Swings at the penguin. If its Pink and doesnt have a buddy you will be blocked. Spawn Sparks;
     IEnumerator SwingAction()
     {
       //  Debug.Log("Told to swing");
@@ -175,11 +227,7 @@ public class PlayerMove : MonoBehaviour
       
         
         
-        Collider[] test = Physics.OverlapSphere(swingPoint.position, swingRange);
-        foreach (Collider c in test)
-        {
-            Debug.Log(c.name);
-        }
+        
 
 
         foreach (Collider penguin in hitPen)
@@ -189,25 +237,36 @@ public class PlayerMove : MonoBehaviour
             {
                 
                 PenguinBase pen = penguin.GetComponent<PenguinBase>();
-                GameManager.Instance.mCaught++;
+               
+                GameManager.Instance.AddScore(pen.penType.myName);
 
-                GameManager.Instance.UpdateUI();
-                pen.agent.speed = 0f;
+                pen.StartCoroutine(pen.gotHit());
+                if (!penBlocked)
+                {
 
-                ball.transform.parent = penguin.gameObject.transform;
-                ball.transform.localPosition = Vector3.zero;
-              
-               // Time.timeScale = 0;
-                CameraSwitcher.SwitchCamera(spinView);
-                spinView.LookAt = penguin.transform;
-                spinView.Follow = penguin.transform;
-                for (int i = 0; i <200 ; i++)
-                  {
-                spinView.m_XAxis.Value += 1;
-                yield return new WaitForSeconds(.01f);
-                  }
-                Time.timeScale = 1;
-                pen.gotHit();
+                    pen.agent.speed = 0f;
+
+                    ball.transform.parent = penguin.gameObject.transform;
+                    ball.transform.localPosition = Vector3.zero;
+
+                    // Time.timeScale = 0;
+                    CameraSwitcher.SwitchCamera(spinView);
+                    spinView.LookAt = penguin.transform;
+                    spinView.Follow = penguin.transform;
+                    for (int i = 0; i < 200; i++)
+                    {
+                        spinView.m_XAxis.Value += 1;
+                        yield return new WaitForSeconds(.01f);
+                    }
+                    StartCoroutine(SpawnSparks(penguin.transform));
+                    Time.timeScale = 1;
+                   
+                    pen.penLock = true;
+                }
+                else
+                {
+                    Debug.Log("He blocked me");
+                }
             }
         }
         yield return new WaitForSeconds(.2f);
@@ -215,15 +274,27 @@ public class PlayerMove : MonoBehaviour
       
         Destroy(ball);
     }
+    //Spawns Sparks.
+    IEnumerator SpawnSparks(Transform placeToSpawn)
+    {
+        ParticleSystem tempSpark = Instantiate(sparks, placeToSpawn.transform.position, Quaternion.identity);
+        yield return new WaitForSeconds(1f);
+       
 
+    }
+    void Interaction()
+    {
+        Debug.Log("Im interacting with something");
+        interactionCheck = false;
+        //Call lore function in the inanimate object?
+        interact.Lore();
+    }
 
     void OnDisable()
     {
         controls.Disable();
     }
 
-
-   
     public void takeHit(float damage)
     {
         health-=damage;
@@ -231,7 +302,11 @@ public class PlayerMove : MonoBehaviour
         Debug.Log("I took"+damage +"damage");
     }
 
-   
+    void vault()
+    {
+
+    }
+
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.blue;
@@ -244,5 +319,23 @@ public class PlayerMove : MonoBehaviour
             Gizmos.DrawWireSphere(t.position, groundRadius);
         }
 
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag== "Interaction")
+        {
+            interact = other.GetComponent<interactableObject>();
+            interactionCheck = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Interaction")
+        {
+            interact = null;
+            interactionCheck = false;
+        }
     }
 }
