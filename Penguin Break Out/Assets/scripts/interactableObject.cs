@@ -5,20 +5,14 @@ using UnityEngine;
 public class interactableObject : MonoBehaviour
 {
     public GameObject[] pensToLore;
-    Collider[] colliders;
+  //  Collider[] colliders;
     public Collider s;
 
     public void Start()
     {
-        colliders = GetComponent<Collider[]>();
-        foreach( Collider c in colliders)
-        {
-            if (c.isTrigger)
-            {
-                s = c;
-            }
-        }
+       
     }
+    //Used to Lore the penguins after the player interacts with the item.
     public void Lore() {
 
         s.enabled = false;

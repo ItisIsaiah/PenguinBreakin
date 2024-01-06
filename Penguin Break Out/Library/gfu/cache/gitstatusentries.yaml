@@ -13,85 +13,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 6
-  lastUpdatedAtString: 2023-11-09T15:59:04.349-05:00
-  initializedAtString: 2023-11-09T15:47:50.652-05:00
+  lastUpdatedAtString: 2024-01-06T02:40:19.994-05:00
+  initializedAtString: 2024-01-06T00:09:20.913-05:00
   entries:
-  - path: Penguin Break Out\Assets\interactableObject.cs
-    fullPath: C:\Users\zayfo\Documents\GitHub\PenguinBreakin\Penguin Break Out\Assets\interactableObject.cs
-    projectPath: Assets\interactableObject.cs
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: Penguin Break Out\Assets\interactableObject.cs.meta
-    fullPath: C:\Users\zayfo\Documents\GitHub\PenguinBreakin\Penguin Break Out\Assets\interactableObject.cs.meta
-    projectPath: Assets\interactableObject.cs.meta
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: Penguin Break Out\Assets\PauseMenu.cs
-    fullPath: C:\Users\zayfo\Documents\GitHub\PenguinBreakin\Penguin Break Out\Assets\PauseMenu.cs
-    projectPath: Assets\PauseMenu.cs
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: Penguin Break Out\Assets\PauseMenu.cs.meta
-    fullPath: C:\Users\zayfo\Documents\GitHub\PenguinBreakin\Penguin Break Out\Assets\PauseMenu.cs.meta
-    projectPath: Assets\PauseMenu.cs.meta
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: Penguin Break Out\Assets\PinkPenguin.cs
-    fullPath: C:\Users\zayfo\Documents\GitHub\PenguinBreakin\Penguin Break Out\Assets\PinkPenguin.cs
-    projectPath: Assets\PinkPenguin.cs
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Penguin Break Out\Assets\Scenes\Iceberg Arena.unity
-    fullPath: C:\Users\zayfo\Documents\GitHub\PenguinBreakin\Penguin Break Out\Assets\Scenes\Iceberg
-      Arena.unity
-    projectPath: Assets\Scenes\Iceberg Arena.unity
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
   - path: Penguin Break Out\Assets\Scenes\TestScene.unity
     fullPath: C:\Users\zayfo\Documents\GitHub\PenguinBreakin\Penguin Break Out\Assets\Scenes\TestScene.unity
     projectPath: Assets\Scenes\TestScene.unity
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Penguin Break Out\Assets\ScriptableIbjects\Penguins\Pink.asset
-    fullPath: C:\Users\zayfo\Documents\GitHub\PenguinBreakin\Penguin Break Out\Assets\ScriptableIbjects\Penguins\Pink.asset
-    projectPath: Assets\ScriptableIbjects\Penguins\Pink.asset
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
   - path: Penguin Break Out\Assets\scripts\interactableObject.cs
     fullPath: C:\Users\zayfo\Documents\GitHub\PenguinBreakin\Penguin Break Out\Assets\scripts\interactableObject.cs
     projectPath: Assets\scripts\interactableObject.cs
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Penguin Break Out\Assets\scripts\interactableObject.cs.meta
-    fullPath: C:\Users\zayfo\Documents\GitHub\PenguinBreakin\Penguin Break Out\Assets\scripts\interactableObject.cs.meta
-    projectPath: Assets\scripts\interactableObject.cs.meta
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Penguin Break Out\Assets\scripts\PauseMenu.cs
-    fullPath: C:\Users\zayfo\Documents\GitHub\PenguinBreakin\Penguin Break Out\Assets\scripts\PauseMenu.cs
-    projectPath: Assets\scripts\PauseMenu.cs
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Penguin Break Out\Assets\scripts\PauseMenu.cs.meta
-    fullPath: C:\Users\zayfo\Documents\GitHub\PenguinBreakin\Penguin Break Out\Assets\scripts\PauseMenu.cs.meta
-    projectPath: Assets\scripts\PauseMenu.cs.meta
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Penguin Break Out\Assets\scripts\PenguinBase.cs
-    fullPath: C:\Users\zayfo\Documents\GitHub\PenguinBreakin\Penguin Break Out\Assets\scripts\PenguinBase.cs
-    projectPath: Assets\scripts\PenguinBase.cs
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
@@ -101,99 +34,45 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Penguin Break Out\Library\Artifacts\2d\2deb66a38331f3357fc40775c9988961
-    fullPath: C:\Users\zayfo\Documents\GitHub\PenguinBreakin\Penguin Break Out\Library\Artifacts\2d\2deb66a38331f3357fc40775c9988961
-    projectPath: Library\Artifacts\2d\2deb66a38331f3357fc40775c9988961
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: Penguin Break Out\Library\Artifacts\41\4181f1f8aa3dc91e805c65dc686e7b93
-    fullPath: C:\Users\zayfo\Documents\GitHub\PenguinBreakin\Penguin Break Out\Library\Artifacts\41\4181f1f8aa3dc91e805c65dc686e7b93
-    projectPath: Library\Artifacts\41\4181f1f8aa3dc91e805c65dc686e7b93
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: Penguin Break Out\Library\Artifacts\41\41f96ebacc7b75637f8ace69265e6cd5
-    fullPath: C:\Users\zayfo\Documents\GitHub\PenguinBreakin\Penguin Break Out\Library\Artifacts\41\41f96ebacc7b75637f8ace69265e6cd5
-    projectPath: Library\Artifacts\41\41f96ebacc7b75637f8ace69265e6cd5
+  - path: Penguin Break Out\Library\Artifacts\3b\3b5589d45451329c85abb55c33b39ceb
+    fullPath: C:\Users\zayfo\Documents\GitHub\PenguinBreakin\Penguin Break Out\Library\Artifacts\3b\3b5589d45451329c85abb55c33b39ceb
+    projectPath: Library\Artifacts\3b\3b5589d45451329c85abb55c33b39ceb
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Penguin Break Out\Library\Artifacts\45\4585320f1429fd24a56e63a3aea9fda7
-    fullPath: C:\Users\zayfo\Documents\GitHub\PenguinBreakin\Penguin Break Out\Library\Artifacts\45\4585320f1429fd24a56e63a3aea9fda7
-    projectPath: Library\Artifacts\45\4585320f1429fd24a56e63a3aea9fda7
+  - path: Penguin Break Out\Library\Artifacts\4f\4f8d1502642fedd8463a453b7c2722be
+    fullPath: C:\Users\zayfo\Documents\GitHub\PenguinBreakin\Penguin Break Out\Library\Artifacts\4f\4f8d1502642fedd8463a453b7c2722be
+    projectPath: Library\Artifacts\4f\4f8d1502642fedd8463a453b7c2722be
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Penguin Break Out\Library\Artifacts\46\46439bbe0660f5ddf4c2db28944bc16c
-    fullPath: C:\Users\zayfo\Documents\GitHub\PenguinBreakin\Penguin Break Out\Library\Artifacts\46\46439bbe0660f5ddf4c2db28944bc16c
-    projectPath: Library\Artifacts\46\46439bbe0660f5ddf4c2db28944bc16c
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: Penguin Break Out\Library\Artifacts\4b\4b56e195978caabf592f9e7402b20063
-    fullPath: C:\Users\zayfo\Documents\GitHub\PenguinBreakin\Penguin Break Out\Library\Artifacts\4b\4b56e195978caabf592f9e7402b20063
-    projectPath: Library\Artifacts\4b\4b56e195978caabf592f9e7402b20063
+  - path: Penguin Break Out\Library\Artifacts\78\78277fc9d574b5aa4ad2c1d796f4af19
+    fullPath: C:\Users\zayfo\Documents\GitHub\PenguinBreakin\Penguin Break Out\Library\Artifacts\78\78277fc9d574b5aa4ad2c1d796f4af19
+    projectPath: Library\Artifacts\78\78277fc9d574b5aa4ad2c1d796f4af19
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Penguin Break Out\Library\Artifacts\5c\5cac1a85af889098e18032a7a088fcd7
-    fullPath: C:\Users\zayfo\Documents\GitHub\PenguinBreakin\Penguin Break Out\Library\Artifacts\5c\5cac1a85af889098e18032a7a088fcd7
-    projectPath: Library\Artifacts\5c\5cac1a85af889098e18032a7a088fcd7
+  - path: Penguin Break Out\Library\Artifacts\7a\7afe472b747f704efc87be2c53b46a03
+    fullPath: C:\Users\zayfo\Documents\GitHub\PenguinBreakin\Penguin Break Out\Library\Artifacts\7a\7afe472b747f704efc87be2c53b46a03
+    projectPath: Library\Artifacts\7a\7afe472b747f704efc87be2c53b46a03
     originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: Penguin Break Out\Library\Artifacts\73\736797818fda46e93fa41139070809e3
-    fullPath: C:\Users\zayfo\Documents\GitHub\PenguinBreakin\Penguin Break Out\Library\Artifacts\73\736797818fda46e93fa41139070809e3
-    projectPath: Library\Artifacts\73\736797818fda46e93fa41139070809e3
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
+    indexStatus: 1
+    workTreeStatus: 1
   - path: Penguin Break Out\Library\Artifacts\aa\aa66cf068c8108adf7f10e0cea3878fc
     fullPath: C:\Users\zayfo\Documents\GitHub\PenguinBreakin\Penguin Break Out\Library\Artifacts\aa\aa66cf068c8108adf7f10e0cea3878fc
     projectPath: Library\Artifacts\aa\aa66cf068c8108adf7f10e0cea3878fc
     originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: Penguin Break Out\Library\Artifacts\f2\f2eaffe74a70f2a22762ca27008c2aaa
+    fullPath: C:\Users\zayfo\Documents\GitHub\PenguinBreakin\Penguin Break Out\Library\Artifacts\f2\f2eaffe74a70f2a22762ca27008c2aaa
+    projectPath: Library\Artifacts\f2\f2eaffe74a70f2a22762ca27008c2aaa
+    originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Penguin Break Out\Library\Bee\500b0aE.dag
-    fullPath: C:\Users\zayfo\Documents\GitHub\PenguinBreakin\Penguin Break Out\Library\Bee\500b0aE.dag
-    projectPath: Library\Bee\500b0aE.dag
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Penguin Break Out\Library\Bee\500b0aE.dag.json
-    fullPath: C:\Users\zayfo\Documents\GitHub\PenguinBreakin\Penguin Break Out\Library\Bee\500b0aE.dag.json
-    projectPath: Library\Bee\500b0aE.dag.json
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Penguin Break Out\Library\Bee\500b0aE-inputdata.json
-    fullPath: C:\Users\zayfo\Documents\GitHub\PenguinBreakin\Penguin Break Out\Library\Bee\500b0aE-inputdata.json
-    projectPath: Library\Bee\500b0aE-inputdata.json
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
   - path: Penguin Break Out\Library\Bee\artifacts\500b0aE.dag\Assembly-CSharp.dll
     fullPath: C:\Users\zayfo\Documents\GitHub\PenguinBreakin\Penguin Break Out\Library\Bee\artifacts\500b0aE.dag\Assembly-CSharp.dll
     projectPath: Library\Bee\artifacts\500b0aE.dag\Assembly-CSharp.dll
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Penguin Break Out\Library\Bee\artifacts\500b0aE.dag\Assembly-CSharp.ref.dll
-    fullPath: C:\Users\zayfo\Documents\GitHub\PenguinBreakin\Penguin Break Out\Library\Bee\artifacts\500b0aE.dag\Assembly-CSharp.ref.dll
-    projectPath: Library\Bee\artifacts\500b0aE.dag\Assembly-CSharp.ref.dll
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Penguin Break Out\Library\Bee\artifacts\500b0aE.dag\Assembly-CSharp.rsp
-    fullPath: C:\Users\zayfo\Documents\GitHub\PenguinBreakin\Penguin Break Out\Library\Bee\artifacts\500b0aE.dag\Assembly-CSharp.rsp
-    projectPath: Library\Bee\artifacts\500b0aE.dag\Assembly-CSharp.rsp
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Penguin Break Out\Library\Bee\artifacts\500b0aE.dag\Assembly-CSharp-Editor.dll
-    fullPath: C:\Users\zayfo\Documents\GitHub\PenguinBreakin\Penguin Break Out\Library\Bee\artifacts\500b0aE.dag\Assembly-CSharp-Editor.dll
-    projectPath: Library\Bee\artifacts\500b0aE.dag\Assembly-CSharp-Editor.dll
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
@@ -203,27 +82,9 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Penguin Break Out\Library\Bee\artifacts\500b0aE.dag\post-processed\Assembly-CSharp-Editor.dll
-    fullPath: C:\Users\zayfo\Documents\GitHub\PenguinBreakin\Penguin Break Out\Library\Bee\artifacts\500b0aE.dag\post-processed\Assembly-CSharp-Editor.dll
-    projectPath: Library\Bee\artifacts\500b0aE.dag\post-processed\Assembly-CSharp-Editor.dll
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
   - path: Penguin Break Out\Library\Bee\backend_profiler0.traceevents
     fullPath: C:\Users\zayfo\Documents\GitHub\PenguinBreakin\Penguin Break Out\Library\Bee\backend_profiler0.traceevents
     projectPath: Library\Bee\backend_profiler0.traceevents
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Penguin Break Out\Library\Bee\backend_profiler1.traceevents
-    fullPath: C:\Users\zayfo\Documents\GitHub\PenguinBreakin\Penguin Break Out\Library\Bee\backend_profiler1.traceevents
-    projectPath: Library\Bee\backend_profiler1.traceevents
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Penguin Break Out\Library\Bee\buildprogram0.traceevents
-    fullPath: C:\Users\zayfo\Documents\GitHub\PenguinBreakin\Penguin Break Out\Library\Bee\buildprogram0.traceevents
-    projectPath: Library\Bee\buildprogram0.traceevents
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
@@ -260,12 +121,6 @@ MonoBehaviour:
   - path: Penguin Break Out\Library\BurstCache\JIT\Hashes\a110ffe6b760e4b56cb86ae44bc7857d.bhc
     fullPath: C:\Users\zayfo\Documents\GitHub\PenguinBreakin\Penguin Break Out\Library\BurstCache\JIT\Hashes\a110ffe6b760e4b56cb86ae44bc7857d.bhc
     projectPath: Library\BurstCache\JIT\Hashes\a110ffe6b760e4b56cb86ae44bc7857d.bhc
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Penguin Break Out\Library\BurstCache\JIT\Hashes\f890d1fdde3a07f1cb7ddaf50227f1a0.bhc
-    fullPath: C:\Users\zayfo\Documents\GitHub\PenguinBreakin\Penguin Break Out\Library\BurstCache\JIT\Hashes\f890d1fdde3a07f1cb7ddaf50227f1a0.bhc
-    projectPath: Library\BurstCache\JIT\Hashes\f890d1fdde3a07f1cb7ddaf50227f1a0.bhc
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
@@ -323,12 +178,6 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Penguin Break Out\Library\ScriptAssemblies\Assembly-CSharp-Editor.dll
-    fullPath: C:\Users\zayfo\Documents\GitHub\PenguinBreakin\Penguin Break Out\Library\ScriptAssemblies\Assembly-CSharp-Editor.dll
-    projectPath: Library\ScriptAssemblies\Assembly-CSharp-Editor.dll
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
   - path: Penguin Break Out\Library\Search\transactions.db
     fullPath: C:\Users\zayfo\Documents\GitHub\PenguinBreakin\Penguin Break Out\Library\Search\transactions.db
     projectPath: Library\Search\transactions.db
@@ -364,40 +213,28 @@ MonoBehaviour:
     projectPath: Logs\AssetImportWorker0-prev.log
     originalPath: 
     indexStatus: 0
-    workTreeStatus: 3
+    workTreeStatus: 5
   - path: Penguin Break Out\Logs\AssetImportWorker1-prev.log
     fullPath: C:\Users\zayfo\Documents\GitHub\PenguinBreakin\Penguin Break Out\Logs\AssetImportWorker1-prev.log
     projectPath: Logs\AssetImportWorker1-prev.log
     originalPath: 
     indexStatus: 0
-    workTreeStatus: 3
+    workTreeStatus: 5
   - path: Penguin Break Out\Logs\AssetImportWorker2-prev.log
     fullPath: C:\Users\zayfo\Documents\GitHub\PenguinBreakin\Penguin Break Out\Logs\AssetImportWorker2-prev.log
     projectPath: Logs\AssetImportWorker2-prev.log
     originalPath: 
     indexStatus: 0
-    workTreeStatus: 3
+    workTreeStatus: 5
   - path: Penguin Break Out\Logs\AssetImportWorker3-prev.log
     fullPath: C:\Users\zayfo\Documents\GitHub\PenguinBreakin\Penguin Break Out\Logs\AssetImportWorker3-prev.log
     projectPath: Logs\AssetImportWorker3-prev.log
     originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
+    indexStatus: 0
+    workTreeStatus: 5
   - path: Penguin Break Out\Logs\shadercompiler-UnityShaderCompiler.exe0.log
     fullPath: C:\Users\zayfo\Documents\GitHub\PenguinBreakin\Penguin Break Out\Logs\shadercompiler-UnityShaderCompiler.exe0.log
     projectPath: Logs\shadercompiler-UnityShaderCompiler.exe0.log
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Penguin Break Out\obj\Debug\Assembly-CSharp.csproj.AssemblyReference.cache
-    fullPath: C:\Users\zayfo\Documents\GitHub\PenguinBreakin\Penguin Break Out\obj\Debug\Assembly-CSharp.csproj.AssemblyReference.cache
-    projectPath: obj\Debug\Assembly-CSharp.csproj.AssemblyReference.cache
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Penguin Break Out\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache
-    fullPath: C:\Users\zayfo\Documents\GitHub\PenguinBreakin\Penguin Break Out\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache
-    projectPath: obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
@@ -407,9 +244,9 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Penguin Break Out\Temp\FSTimeGet-0127a50bf19b5cb449c701d2838dff46
-    fullPath: C:\Users\zayfo\Documents\GitHub\PenguinBreakin\Penguin Break Out\Temp\FSTimeGet-0127a50bf19b5cb449c701d2838dff46
-    projectPath: Temp\FSTimeGet-0127a50bf19b5cb449c701d2838dff46
+  - path: Penguin Break Out\Temp\FSTimeGet-cb3d2b6770b3b744ca1a194bde520fed
+    fullPath: C:\Users\zayfo\Documents\GitHub\PenguinBreakin\Penguin Break Out\Temp\FSTimeGet-cb3d2b6770b3b744ca1a194bde520fed
+    projectPath: Temp\FSTimeGet-cb3d2b6770b3b744ca1a194bde520fed
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
@@ -437,12 +274,6 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Penguin Break Out\UserSettings\EditorUserSettings.asset
-    fullPath: C:\Users\zayfo\Documents\GitHub\PenguinBreakin\Penguin Break Out\UserSettings\EditorUserSettings.asset
-    projectPath: UserSettings\EditorUserSettings.asset
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
   - path: Penguin Break Out\UserSettings\Layouts\CurrentMaximizeLayout.dwlt
     fullPath: C:\Users\zayfo\Documents\GitHub\PenguinBreakin\Penguin Break Out\UserSettings\Layouts\CurrentMaximizeLayout.dwlt
     projectPath: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
