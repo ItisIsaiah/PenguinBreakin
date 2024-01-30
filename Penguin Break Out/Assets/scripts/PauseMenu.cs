@@ -8,11 +8,12 @@ public class PauseMenu : MonoBehaviour
     public GameObject pmUI;
     private void Start()
     {
-        pmUI.SetActive(false);
+        Resume();
+
     }
     public void PauseSwitch()
     {
-        Debug.Log("RECIEVED SIGNAL");
+        //Debug.Log("RECIEVED SIGNAL");
         if (isPaused)
         {
             Resume();
@@ -28,13 +29,16 @@ public class PauseMenu : MonoBehaviour
         pmUI.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
+        Cursor.lockState = CursorLockMode.Locked;
+
     }
 
-  void Pause()
+    void Pause()
     {
         pmUI.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
 }

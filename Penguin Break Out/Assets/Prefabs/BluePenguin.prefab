@@ -263,7 +263,7 @@ MonoBehaviour:
   angle: 106.8
   radius: 10.01
   canSee: 0
-  playerRef: {fileID: 0}
+  target: {fileID: 0}
   targetMask:
     serializedVersion: 2
     m_Bits: 8
@@ -283,10 +283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   penType: {fileID: 11400000, guid: dbf2ccd8061616d499a14a145a2dce44, type: 2}
-  path:
-  - {fileID: 0}
-  - {fileID: 0}
-  scaredPoints: []
+  path: []
   agent: {fileID: 4338620059768019389}
   sight: {fileID: 4338620059768019391}
   playerRef: {fileID: 0}
@@ -294,6 +291,8 @@ MonoBehaviour:
   point: 0
   distanceFromPoint: 1.52
   hitpoint: {fileID: 4338620060177450311}
+  hitRadius: 1.5
+  penLock: 0
 --- !u!195 &4338620059768019389
 NavMeshAgent:
   m_ObjectHideFlags: 0

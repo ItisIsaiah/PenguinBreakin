@@ -7,7 +7,7 @@ public class PenguinBase : MonoBehaviour
 {
      public PenguinScriptableObject penType;
     [SerializeField] Transform[] path;//The path that the penguin will walk on
-    [SerializeField] Transform[] scaredPoints;//The penguin will run to these if they are scared
+   // [SerializeField] Transform[] scaredPoints;//The penguin will run to these if they are scared
     public NavMeshAgent agent;
     public FOV sight;
     public GameObject playerRef;
@@ -19,12 +19,14 @@ public class PenguinBase : MonoBehaviour
     bool isDoingAction = false;
     bool isWalkingToPoint;
     public Transform hitpoint;
-    float hitRadius;
+    public float hitRadius=15.5f;
     LayerMask playerMask;
 
     public bool penLock = false;
     string myName="Pen?";
-   
+
+
+    float distanceFromPlayer;
     virtual public void Start()
     {
         isDoingAction = false;
@@ -37,68 +39,101 @@ public class PenguinBase : MonoBehaviour
     }
     public virtual void Update()
     {
-        
-        if (sight.canSee && Vector3.Distance(transform.position,playerRef.transform.position)>.5f&&!penType.scared&&!isDoingAction) {
-           
-                agent.SetDestination(playerRef.transform.position);
-            isDoingAction = true;
-         }
-        else if (sight.canSee && Vector3.Distance(transform.position, playerRef.transform.position) > .5f && penType.scared&&!isDoingAction)
-        {
-            int randomPoint=Random.Range(0,scaredPoints.Length-2);
-            if (randomPoint < scaredPoints.Length - 2) { agent.SetDestination(scaredPoints[randomPoint].position); }
-            isDoingAction = true;
-
-        }
-        if (sight.canSee && Vector3.Distance(transform.position, playerRef.transform.position) > .2f && penType.aggressive&&!isDoingAction)
-        {
-            
-            StartCoroutine(hit());
-            int randomPoint = Random.Range(0, scaredPoints.Length - 2);
-            if (randomPoint < scaredPoints.Length - 2) { agent.SetDestination(scaredPoints[randomPoint].position); }
-            isDoingAction = true;
-
-        }
-        else if (sight.canSee && Vector3.Distance(transform.position, playerRef.transform.position) > .2f && !penType.aggressive&&!isDoingAction)
-        {
-            //run
-        }
-
+        distanceFromPlayer = Vector3.Distance(transform.position, playerRef.transform.position);
+        //Debug.Log(penType.scared + " | "+penType.myName+ " | see: " + sight.canSee + "| Action: "+isDoingAction);
        
-
-       
-
-        #region path code
-
-        if (!sight.canSee)
-        {
-            if ( Vector3.Distance(transform.position, path[point].position) > distanceFromPoint && !isWalkingToPoint)
+        //If you can see the player, arent scared and arent already doing somehting
+        if (sight.canSee && distanceFromPlayer>.5f&&!penType.scared&&!isDoingAction) {
+            if (penType.aggressive)
             {
-                agent.SetDestination(path[point].position);
-                isWalkingToPoint = true;
-            }
-            
-            else if (Vector3.Distance(transform.position, path[point].position) < distanceFromPoint  ) {
-                if (!(point >= path.Length-1))
+                //if you are aggressive move towards the player until you are too far then hit them!
+                if (distanceFromPlayer > 1.2)
                 {
-                    point++;
+                    //Debug.Log("Tracking| Distance: "+distanceFromPlayer);
+
+                    agent.SetDestination(playerRef.transform.position);
+                    
                 }
                 else
                 {
-                    point = 0;
+                    Debug.Log("Doing the thing");
+                    StartCoroutine(hit());
+                    running();
+                    isDoingAction = true;
                 }
-                isWalkingToPoint = false;
+            }
+            else
+            {
+                //Just walk up to the player happily
+                agent.SetDestination(playerRef.transform.position);
+                isDoingAction = true;
+            }
+         }
+        else if (sight.canSee && distanceFromPlayer > 2f && penType.scared&&!isDoingAction)
+        {
+            running();
+
+        }
+
+
+
+
+
+
+
+        #region path code
+        //If you aren't doing anything and also cant see the player... Follow the path that you are given
+        if (path.Length!=0)
+        {
+            if (!sight.canSee && !isDoingAction)
+            {
+                if (Vector3.Distance(transform.position, path[point].position) > distanceFromPoint && !isWalkingToPoint)
+                {
+                    agent.SetDestination(path[point].position);
+                    isWalkingToPoint = true;
+                }
+
+                else if (Vector3.Distance(transform.position, path[point].position) < distanceFromPoint)
+                {
+                    if (!(point >= path.Length - 1))
+                    {
+                        point++;
+                    }
+                    else
+                    {
+                        point = 0;
+                    }
+                    isWalkingToPoint = false;
+                }
             }
         }
+      
         #endregion
         
     }
     
+
+    void running()
+    {
+        float runTImer = 0f;
+
+        while (runTImer<=5f) {
+            Vector3 dirToPlayer = transform.position - playerRef.transform.position;
+            Vector3 newPos = transform.position + dirToPlayer*20;
+            agent.SetDestination(newPos);
+            runTImer += Time.deltaTime;
+        }
+        isDoingAction = false;
+    }
      IEnumerator hit()
     {
-       // StartCoroutine(DoRotationAtTargetDirection(playerRef.transform));
-        Collider[] hitboxes = Physics.OverlapSphere(hitpoint.position, hitRadius, playerMask);
+        Debug.Log("Trying to hit you!");
+       
+        StartCoroutine(DoRotationAtTargetDirection(playerRef.transform));
+        Collider[] hitboxes = Physics.OverlapSphere(hitpoint.position, hitRadius);
 
+
+        Debug.Log(hitboxes.Length);
         foreach (Collider playerC in hitboxes)
         {//Swing Animation
             if (playerC.CompareTag("Player"))
@@ -141,7 +176,7 @@ public class PenguinBase : MonoBehaviour
 
     public string Dead()
     {
-        Debug.Log("SHOULD BE FUCKING DEAD");
+       // Debug.Log("SHOULD BE FUCKING DEAD");
         Destroy(gameObject);
         return myName;
     }

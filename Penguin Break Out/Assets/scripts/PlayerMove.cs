@@ -24,9 +24,9 @@ public class PlayerMove : MonoBehaviour
     public Transform swingPoint;
     public float swingRange;
     public LayerMask enemyLayers;
-    GameManager gm;
+   
     Vector3 direction;
-    public float health=100;
+    public float health=10;
 
     public GameObject captureBall;
     public ParticleSystem sparks;
@@ -140,7 +140,7 @@ public class PlayerMove : MonoBehaviour
 
     void Pause(InputAction.CallbackContext context)
     {
-        Debug.Log("Paused");
+        //Debug.Log("Paused");
         pm.PauseSwitch();
     }
     void Swing(InputAction.CallbackContext context)
@@ -153,7 +153,7 @@ public class PlayerMove : MonoBehaviour
         {
 
             StartCoroutine(SwingAction());
-            Debug.Log("Swung the net");
+           // Debug.Log("Swung the net");
         }
 
     }
@@ -197,14 +197,14 @@ public class PlayerMove : MonoBehaviour
         }
         else
         {
-            Debug.Log("Pressed Jump");
+            //Debug.Log("Pressed Jump");
             isGrounded = GroundCheck();
             if (isGrounded)
             {
                 animator.SetBool("isJumping", true);
 
                 isJumpPressed = context.ReadValueAsButton();
-                Debug.Log(isJumpPressed);
+                //Debug.Log(isJumpPressed);
                 rb.velocity = Vector3.up * jumpVelocity;
                 isGrounded = true;
 
@@ -298,7 +298,7 @@ public class PlayerMove : MonoBehaviour
     public void takeHit(float damage)
     {
         health-=damage;
-        gm.UpdateUI();
+        GameManager.Instance.UpdateUI();
         Debug.Log("I took"+damage +"damage");
     }
 

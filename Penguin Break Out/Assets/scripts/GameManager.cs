@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     public Slider s; 
     public PlayerMove player;
 
-    LevelScriptableObject myLev;
+    public LevelScriptableObject myLev;
     // Start is called before the first frame update
 
 
@@ -30,12 +30,14 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
         }
+        
     }
     #endregion
 
 
     void Start()
     {
+        s.maxValue = player.health;
         mCaught = 0;
         mTot = 3;
       //  mTot = myLev.monkeysRequired;
@@ -65,7 +67,7 @@ public class GameManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        s.value = player.health;
+       // s.value = player.health;
     }
 
     public void UpdateUI()
